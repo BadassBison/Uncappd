@@ -16,6 +16,8 @@ The process of completing this clone looks like this:
 * MVP Checklist
 * Database schema
 * Sample State
+* Frontend routes and components
+* Backend Routes
 * All other design docs
 
 ### Purpose
