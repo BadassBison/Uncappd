@@ -21,7 +21,7 @@ export const signUp = user => dispatch => (
     SessionApiUtil.signUp(user).then(user => dispatch(receiveCurrentUser(user)))
 )
 export const signIn = user => dispatch => (
-    SessionApiUtil.signIp(user).then(user => dispatch(receiveCurrentUser(user)))
+    SessionApiUtil.signIn(user).then(user => dispatch(receiveCurrentUser(user)))
 )
 export const signOut = () => dispatch => (
     SessionApiUtil.signOut().then(() => dispatch(logoutCurrentUser()))

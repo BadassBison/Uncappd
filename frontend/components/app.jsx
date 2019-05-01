@@ -1,10 +1,16 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Greetings from './splash/greetings';
+import SignUp from './authentication/signup_container';
+import LogIn from './authentication/login';
 
 const App = ({ children }) => (
     <div>
-      <h2>Uncappd App Component</h2>
-      
+      <Switch>
+        <Route path="/login" component={LogIn} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/" component={Greetings} />
+      </Switch>
         
       
     </div>
