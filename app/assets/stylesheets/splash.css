@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tinted {
+    /* background: black; */
+}
+
+.masthead {
+    position: absolute;
+    top: 0px;
+    height: 700px;
+    width: 100vw;
+    background-image: url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg);
+    background-size: cover;
+    filter: brightness(25%);
+    z-index: -1;
+}
+
+.login-signup img {
+
+
+}
+
+#link-wrapper {
+    position: relative;
+    right: 25px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+#link-wrapper a {
+    font-family: ProximaNova, Helvetica, sans-serif;
+    font-size: 0.9em;
+    border: 2px solid white;
+    font-weight: 500;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 16px 20px;
+    color: white;
+    box-sizing: border-box;
+    -webkit-transition: -webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+    transition-property: width,height,transform,background,font-size,opacity;
+    transition-duration: 1s,1s,1s,1s,1s,1s;
+}
+
+#link-wrapper a:hover {
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    background: white;
+}

@@ -1,22 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Splash = () => (
-    <>
-        <h2>Splash page</h2>
-        <nav className="login-signup">
-            <Link to={"/signup"}>Signup</Link>&nbsp;
-            <Link to={"/login"}>Log In</Link>
-        </nav>
-    </>
-    // const personalGreeting = () => (
-    //     <hgroup className="header-group">
-    // )
+const Splash = ({ currentUser, signOut }) => {
     
-    
-        
-);
-  
-export default Splash;
+    const sessionLinks = () => (
+        <>
+        <div className="">
+            <div className="masthead"></div>
+            <div id="link-wrapper">
+                    <Link to="/login">SIGN IN</Link>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <Link to="/signup">CREATE AN ACCOUNT</Link>
+            </div>
+            
 
-// { currentUser, logOut }
+        </div>
+        </>
+    );
+
+    const personalGreeting = () => (
+        <hgroup className="header-group">
+          <h2 className="header-name">Hi, {currentUser.username}!</h2>
+          <button className="header-button" onClick={signOut}>Log Out</button>
+        </hgroup>
+    );
+
+    return currentUser ? personalGreeting() : sessionLinks();
+};  
+    
+export default Splash;

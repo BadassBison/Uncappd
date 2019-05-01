@@ -8,10 +8,11 @@ const receiveCurrentUser = currentUser => ({
     type: RECEIVE_CURRENT_USER,
     currentUser
 })
-const logoutCurrentUser = currentUser => ({
-    type: LOGOUT_CURRENT_USER,
-    user: currentUser.id
-})
+const logoutCurrentUser = () => {
+    return {
+        type: LOGOUT_CURRENT_USER
+    }
+}
 export const receiveErrors = currentUser => ({
     type: RECEIVE_ERRORS,
     errors: user.errors
@@ -24,5 +25,8 @@ export const signIn = user => dispatch => (
     SessionApiUtil.signIn(user).then(user => dispatch(receiveCurrentUser(user)))
 )
 export const signOut = () => dispatch => (
-    SessionApiUtil.signOut().then(() => dispatch(logoutCurrentUser()))
+    SessionApiUtil.signOut()
+        .then(() => {
+            dispatch(logoutCurrentUser())
+        })
 )
