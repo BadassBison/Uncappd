@@ -10,6 +10,7 @@ const sessionReducer = (state = {}, action) => {
     switch(action.type){
 
         case RECEIVE_CURRENT_USER:
+        // debugger
           return merge({}, state, {id: action.currentUser.id});
 
         case LOGOUT_CURRENT_USER:

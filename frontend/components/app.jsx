@@ -1,15 +1,15 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Greetings from './splash/greetings';
+import Splash from './splash_container';
 import SignUp from './authentication/signup_container';
-import LogIn from './authentication/login';
+import LogIn from './authentication/login_container';
 
 const App = ({ children }) => (
     <div>
       <Switch>
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={SignUp} />
-        <Route path="/" component={Greetings} />
+        <Route path="/" component={Splash} />
       </Switch>
         
       

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { signUp } from '../../actions/session_actions';
-import SignUp from './signup';
+import { signIn } from '../../actions/session_actions';
+import LogIn from './login';
 
 const mapSTP = (state, ownProps) => {
     return (
@@ -10,7 +10,7 @@ const mapSTP = (state, ownProps) => {
 }
 
 const mapDTP = dispatch => ({
-    signUp: user => dispatch(signUp(user))
+    signIn: user => dispatch(signIn(user))
 })
 
-export default connect(mapSTP, mapDTP)(SignUp)
+export default connect(mapSTP, mapDTP)(LogIn)
