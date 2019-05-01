@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
 
     # protect_from_forgery with: :exception
+    # protect_from_forgery with: :null_session
+    # respond_to :json
+    # before_action :underscore_params!
 
     helper_method :current_user, :logged_in
 
@@ -26,5 +29,10 @@ class ApplicationController < ActionController::Base
             render json: { base: ['invalid credentials'] }, status: 401
         end
     end
+
+    private
+    # def underscore_params!
+    #     params.deep_transform_keys!(&:underscore)
+    # end
 
 end
