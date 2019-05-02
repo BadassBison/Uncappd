@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReCAPTCHA from "react-google-recaptcha";
+import Typed from 'typed.js';
 
 class SignUp extends React.Component {
     constructor(props){
@@ -13,9 +15,12 @@ class SignUp extends React.Component {
             location: '',
             gender: '',
             country: '',
-            birthday: ''
+            birthday: '',
+            recaptcha: false
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoUser = this.demoUser.bind(this);
+        this.clearInputs = this.clearInputs.bind(this);
     }
 
     onChange(field){
@@ -26,12 +31,76 @@ class SignUp extends React.Component {
         e.preventDefault();
         this.props.signUp(this.state);
     }
-    
+
+    clearInputs() {
+        let elements = Array.from(document.getElementsByClassName("input"));
+        elements.map(input => input.value = "");
+    }
+
+    demoUser(e) {
+        e.preventDefault;
+        this.clearInputs();
+
+        const username = {
+            strings: ["Bison"],
+            typeSpeed: 80
+        }
+        const email = {
+            strings: ["badassBison@supercool.stud"],
+            typeSpeed: 80
+        }
+        const pass1 = {
+            strings: ["pass1234"],
+            typeSpeed: 80
+        }
+        const pass2 = {
+            strings: ["pass1234"],
+            typeSpeed: 80
+        }
+        const fname = {
+            strings: ["Jeff"],
+            typeSpeed: 80
+        }
+        const lname = {
+            strings: ["Smith"],
+            typeSpeed: 80
+        }
+        const location = {
+            strings: ["San Francisco"],
+            typeSpeed: 80
+        }
+        const gender = {
+            strings: ["Male"],
+            typeSpeed: 80
+        }
+        const country = {
+            strings: ["United States"],
+            typeSpeed: 80
+        }
+        const bday = {
+            strings: ["2/12/88"],
+            typeSpeed: 80
+        }
+
+        new Typed("#username", username);
+        new Typed("#email", email);
+        new Typed("#pass1", pass1);
+        new Typed("#pass2", pass2);
+        new Typed("#fname", fname);
+        new Typed("#lname", lname);
+        new Typed("#location", location);
+        new Typed("#gender", gender);
+        new Typed("#country", country);
+        new Typed("#bday", bday);
+
+    }
+
     render() {
+       
         return (
             <div>
                 <div className="login-signup"></div>
-                <div className="form-wrapper">
+                <div className="signup-wrapper">
                     <form id="signup-form" onSubmit={this.handleSubmit}>
                         
                         <div className="form-logo">
@@ -43,16 +112,16 @@ class SignUp extends React.Component {
                         </div>
 
                         <div className="form-user-info">
-                            <p>All fields below are required unless specified.</p>
+                            <p><strong>All fields below are required unless specified.</strong></p>
                         </div>
 
                         <div className="row">
                             <div className="form-field">
-                                <input type="text" name="user[username]" placeholder="Username" onChange={this.onChange("username")} />
+                                <input type="text" id='username' className="input" name="user[username]" placeholder="Username" onChange={this.onChange("username")} />
                             </div>
                             
                             <div className="form-field">
-                                <input type="text" name="user[email]" placeholder="Email" onChange={this.onChange("email")} /><br />
+                                <input type="text" id="email" className="input" name="user[email]" placeholder="Email" onChange={this.onChange("email")} /><br />
                             </div>
                         </div>
 
@@ -62,54 +131,61 @@ class SignUp extends React.Component {
                         
                         <div className="row">
                             <div className="form-field">
-                                <input type="text" name="user[password]" placeholder="password" onChange={this.onChange("password")} />
+                                <input type="text" id="pass1" className="input" name="user[password]" placeholder="password" onChange={this.onChange("password")} />
                             </div>
                             
                             <div className="form-field">
-                                <input type="text" name="user[repeat_password]" placeholder="Repeat Password" onChange={this.onChange("repeatPass")} />
+                                <input type="text" id="pass2" className="input" name="user[repeat_password]" placeholder="Repeat Password" onChange={this.onChange("repeatPass")} />
+                            </div>
+                        </div>
+
+                        <div className="row-space"></div>
+
+                        <div className="row">
+                            <div className="form-field">
+                                <input type="text" id="fname" className="input" name="user[f_name]" placeholder="First Name" onChange={this.onChange("f_name")} />
+                            </div>
+                            
+                            <div className="form-field">
+                                <input type="text" id="lname" className="input" name="user[l_name]" placeholder="Last Name" onChange={this.onChange("l_name")} />
                             </div>
                         </div>
 
                         <div className="row">
                             <div className="form-field">
-                                <input type="text" name="user[f_name]" placeholder="First Name" onChange={this.onChange("f_name")} />
+                                <input type="text" id="location" className="input" name="user[location]" placeholder="Location (Optional)" onChange={this.onChange("location")} />
                             </div>
                             
                             <div className="form-field">
-                                <input type="text" name="user[l_name]" placeholder="Last Name" onChange={this.onChange("l_name")} />
+                                <input type="text" id="gender" className="input" name="user[gender]" placeholder="Select Your Gender" onChange={this.onChange("gender")} />
                             </div>
+                        </div>
+                        
+                        <div className="row">
+                            <div className="form-field">
+                                <input type="text" id="country" className="input" name="user[country]" placeholder="Select Your Country" onChange={this.onChange("country")} />
+                            </div>
+                            
+                            <div className="form-field">
+                                <input type="text" id="bday" className="input" name="user[birthday]" placeholder="birthday" onChange={this.onChange("birthday")} />
+                            </div>
+                        </div>
+                        
+                        <div className="recaptcha" id="test">
+                            <ReCAPTCHA sitekey="6Le9c6EUAAAAAJ8wFffA0cyehFjUMs3a3Uvq5nK-" />
                         </div>
 
-                        <div className="row">
-                            <div className="form-field">
-                                <input type="text" name="user[location]" placeholder="Location (Optional)" onChange={this.onChange("location")} />
-                            </div>
-                            
-                            <div className="form-field">
-                                <input type="text" name="user[gender]" placeholder="Select Your Gender" onChange={this.onChange("gender")} />
-                            </div>
-                        </div>
-                        
-                        <div className="row">
-                            <div className="form-field">
-                                <input type="text" name="user[country]" placeholder="Select Your Country" onChange={this.onChange("country")} />
-                            </div>
-                            
-                            <div className="form-field">
-                                <input type="text" name="user[birthday]" placeholder="birthday" onChange={this.onChange("birthday")} />
-                            </div>
-                        </div>
-                        
                         <div className="privacy-statement">
-                            <p>You must be of legal drinking age in your country to join Untappd. By clicking Create Account, you agree to our Terms of Use and our Privacy Policy</p>
+                            <p>You must be of legal drinking age in your country to join Untappd. By clicking Create Account, you agree to our <a href="#" >Terms of Use</a> and our <a href="#">Privacy Policy</a></p>
                         </div>
 
                         <div className="submit-form">
                             <input type="submit" value="Create Account" />
+                            <input type="button" id="demo" onClick={this.demoUser} value="Demo User" />
                         </div>
-                    </form>
-                    <Link to={"/"}>Back Home</Link>  
+                    </form> 
                 </div> 
+                
             </div>
         )
     }

@@ -1,0 +1,142 @@
+.login-signup {
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg);
+    background-size: cover;
+    filter: brightness(30%);
+    z-index: -1;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-form {
+    position: relative;
+    background: white;
+    height: 54%;
+    width: 24%;
+}
+
+.form-logo-sm {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+
+.facebook-login {
+    display: flex;
+    justify-content: center;
+}
+
+.or {
+    display: flex;
+    justify-content: center;
+
+}
+
+.or span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 3px solid lightgray;
+    color: lightgray;
+    border-radius: 50%;
+    text-align: center;
+    padding: 6px;
+    margin: 10px 0 2px 0;
+    font-size: .75em;
+}
+
+.signin-field {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.signin-field input {
+    width: 73%;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.submit-form input[type=submit]{
+    width: 35%;
+    height: 45px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: inline-block;
+    box-sizing: border-box;
+    background: gold;
+    border: none;
+    border-radius: 3px;
+}
+
+.submit-form input[type=submit]:hover {
+    background: goldenrod;
+}
+
+.submit-form input[type=button] {
+    width: 35%;
+    height: 45px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: inline-block;
+    box-sizing: border-box;
+    background: limegreen;
+    border: none;
+    border-radius: 3px;
+}
+
+.submit-form input[type=button]:hover {
+    background: greenyellow;
+}
+
+
+.forgot-password {
+    display: flex;
+    justify-content: center;
+}
+
+.forgot-border {
+    display: flex;
+    justify-content: center;
+    width: 73%;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.forgot-password a {
+    font-size: .85em;
+    text-decoration: none;
+    color: indianred;
+    text-align: center;
+}
+
+.forgot-password a:hover {
+    text-decoration: none;
+    color: coral;
+}
+
+.signup-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: firebrick;
+}
+
+.link:hover { color: tomato; }
