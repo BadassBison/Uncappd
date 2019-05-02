@@ -1,3 +1,7 @@
+* {
+    box-content: border-box;
+}
+
 .login-signup {
     position: absolute;
     top: 0px;
@@ -5,7 +9,7 @@
     width: 100vw;
     background-image: url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg);
     background-size: cover;
-    filter: brightness(25%);
+    filter: brightness(30%);
     z-index: -1;
 }
 
@@ -13,8 +17,115 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+
+.left-form {
+    float: left;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.right-form {
+    width: 40%;
+    box-sizing: border-box;
 }
 
 #signup-form {
+    background: white;
+    height: 90%;
+    width: 35%;
+
+}
+
+#signup-form input{
+    width: 100%;
+    height: 35px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+#signup-form input[type=text]::placeholder{
+    color: silver;
+    text-indent: 1em;
+    font-size: 1.3em;
+}
+
+#signup-form input[type=submit]{
+    width: 40%;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 500;
+    display: inline-block;
+    box-sizing: border-box;
+    background: gold;
+}
+
+#signup-form input[type=submit]:hover{
+    background: goldenrod;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-field {
+    width: 40%;
+}
+
+.submit-form {
+    display: flex;
+    justify-content: center;
+}
+
+.form-logo {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+
+.form-info {
+    display: flex;
+    justify-content: center;
     
+}
+
+.form-info p {
+    background: #FFFCA5;
+    width: 90%;
+    padding: 5px 18px;
+    box-sizing: border-box;
+    opacity: .8;
+    margin: 0 auto;
+    text-align: center;
+    font-size: .9em;
+}
+
+.form-user-info {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: .9em;
+}
+
+.form-password-info {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 5px 0;
+    font-size: .8em;
+}
+
+.privacy-statement {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.privacy-statement p {
+    font-size: .6em;
+    width: 70%;
+    text-align: center;
 }

@@ -14,6 +14,7 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "typed.js": "^2.0.10",
     "webpack": "^4.30.0"
   },
   "description": "Uncappd is a social media application that allows users to publicly share beers and their reviews, of which can be viewed by other users/friends.",
