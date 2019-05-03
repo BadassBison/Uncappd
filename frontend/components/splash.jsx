@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FacebookLogin from 'react-facebook-login';
 
 const Splash = ({ currentUser, signOut }) => {
-    
+
     const sessionLinks = () => (
         <>
         <div className="">
@@ -12,8 +13,28 @@ const Splash = ({ currentUser, signOut }) => {
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <Link to="/signup">CREATE AN ACCOUNT</Link>
             </div>
-            
+            <div className="main-wrapper">
+                <div className="left-content">
+                    <div className="uncappd-logo"><img src="https://untappd.akamaized.net/assets/custom/homepage/images/ut-logo-bottles.svg" alt="untappd logo" /></div>
+                    <div className="little-hr"></div>
+                    <p className="discover">Discover and share your favorite beer.</p>
+                    <div className="facebook-login">
+                            <FacebookLogin
+                                appId="323049325046608"
+                                autoLoad={true}
+                                fields="name,email,picture"
+                                onClick={componentClicked}
+                                callback={responseFacebook}    
+                            />
+                    </div>
+                </div>
 
+                
+                <div className="right-content">
+                    <img src="https://untappd.akamaized.net/assets/custom/homepage/images/masthead-img-main.png" alt="Phone discover crop right" className="masthead-img" />
+                </div>
+                
+            </div>
         </div>
         </>
     );
@@ -27,5 +48,13 @@ const Splash = ({ currentUser, signOut }) => {
 
     return currentUser ? personalGreeting() : sessionLinks();
 };  
+
+function responseFacebook(response) {
+    console.log("response")
+}
+
+function componentClicked() {
+    console.log("clicked")
+}
     
 export default Splash;

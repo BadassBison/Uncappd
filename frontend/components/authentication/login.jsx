@@ -25,18 +25,20 @@ class LogIn extends React.Component {
         this.clearInputs();
 
         const username = {
-            strings: ["Bison"],
+            strings: ["Carlos"],
             typeSpeed: 80
         }
 
         const password = {
-            strings: ["pass1234"],
+            strings: ["123456"],
             typeSpeed: 80
         }
 
         new Typed("#username", username);
+        this.setState({ username: "Carlos" })
         setTimeout(() => {
             new Typed("#password", password);
+            this.setState({ password: "123456" })
         }, 600);
         
     }
@@ -54,7 +56,7 @@ class LogIn extends React.Component {
         console.log("response")
     }
 
-    onClick() {
+    componentClicked() {
         console.log("clicked")
     }
 
@@ -68,7 +70,7 @@ class LogIn extends React.Component {
                     <form id="login-form" onSubmit={this.handleSubmit}>
                         
                         <div className="form-logo-sm">
-                            <h2>Logo Goes Here</h2>
+                            <img src={window.logoURL} />
                         </div>
 
                         <div className="facebook-login">

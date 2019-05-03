@@ -8,6 +8,7 @@ class SignUp extends React.Component {
         super(props)
         this.state = {
             username: '',
+            email: '',
             password: '',
             repeatPass: '',
             f_name: '',
@@ -21,6 +22,7 @@ class SignUp extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoUser = this.demoUser.bind(this);
         this.clearInputs = this.clearInputs.bind(this);
+        this.onChange = this.onChange.bind(this);
     }
 
     onChange(field){
@@ -37,16 +39,31 @@ class SignUp extends React.Component {
         elements.map(input => input.value = "");
     }
 
+    makeid(length) {
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const charactersLength = characters.length;
+        for ( let i = 0; i < length; i++ ) {
+           result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+     }
+
     demoUser(e) {
         e.preventDefault;
         this.clearInputs();
 
+        let a = this.makeid(8);
+        // let a = 'bison';
+        let b = this.makeid(8);
+        // let b = 'bison';
+
         const username = {
-            strings: ["Bison"],
+            strings: [a],
             typeSpeed: 80
         }
         const email = {
-            strings: ["badassBison@supercool.stud"],
+            strings: [b + "@gmail.com"],
             typeSpeed: 80
         }
         const pass1 = {
@@ -78,7 +95,7 @@ class SignUp extends React.Component {
             typeSpeed: 80
         }
         const bday = {
-            strings: ["2/12/88"],
+            strings: ["2/12/92"],
             typeSpeed: 80
         }
 
@@ -93,6 +110,19 @@ class SignUp extends React.Component {
         new Typed("#country", country);
         new Typed("#bday", bday);
 
+        this.setState({
+                username: a,
+                email: b,
+                password: 'pass1234',
+                repeatPass: 'pass12343',
+                f_name: 'Jeff',
+                l_name: 'Smith',
+                location: 'San Francisco',
+                gender: 'Male',
+                country: 'United States',
+                birthday: '2/12/92'
+        })
+
     }
 
     render() {
@@ -104,7 +134,7 @@ class SignUp extends React.Component {
                     <form id="signup-form" onSubmit={this.handleSubmit}>
                         
                         <div className="form-logo">
-                            <h2>Logo Goes Here</h2>
+                            <img src={window.logoURL} />
                         </div>
 
                         <div className="form-info">
@@ -118,12 +148,12 @@ class SignUp extends React.Component {
                         <div className="row">
                             <div className="form-field">
                                 <input type="text" id='username' className="input logo" name="user[username]" placeholder="Username" onChange={this.onChange("username")} />
-                                <i class="fas fa-user"></i>
+                                <i className="fas fa-user"></i>
                             </div>
                             
                             <div className="form-field">
                                 <input type="text" id="email" className="input logo" name="user[email]" placeholder="Email" onChange={this.onChange("email")} /><br />
-                                <i class="fas fa-envelope"></i>
+                                <i className="fas fa-envelope"></i>
                             </div>
                         </div>
 
@@ -134,12 +164,12 @@ class SignUp extends React.Component {
                         <div className="row">
                             <div className="form-field">
                                 <input type="text" id="pass1" className="input logo" name="user[password]" placeholder="password" onChange={this.onChange("password")} />
-                                <i class="fas fa-lock"></i>
+                                <i className="fas fa-lock"></i>
                             </div>
                             
                             <div className="form-field">
                                 <input type="text" id="pass2" className="input logo" name="user[repeat_password]" placeholder="Repeat Password" onChange={this.onChange("repeatPass")} />
-                                <i class="fas fa-lock"></i>
+                                <i className="fas fa-lock"></i>
                             </div>
                         </div>
 

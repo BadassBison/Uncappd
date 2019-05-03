@@ -22,7 +22,7 @@ input:focus { outline: none}
     position: relative;
     background: white;
     /* height: 90%; */
-    width: 36%;
+    max-width: 600px;
 
 }
 
@@ -96,12 +96,17 @@ input:focus { outline: none}
 .submit-form {
     display: flex;
     justify-content: space-around;
+    padding: 5px;
 }
 
 .form-logo {
     display: flex;
     justify-content: center;
     height: 110px;
+}
+
+.form-logo img {
+    width: 60%;
 }
 
 .form-info {
@@ -176,7 +181,7 @@ input:focus { outline: none}
 }
 
 .row-space {
-    height: 50px;
+    height: 30px;
 }
 
 .recaptcha {
