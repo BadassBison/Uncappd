@@ -106,7 +106,7 @@ class LogIn extends React.Component {
 
                         <div className="forgot-password">
                             <div className="forgot-border">
-                                <a href="#">Forgot your password?</a>
+                                <a href="https://github.com/BadassBison/Uncappd/wiki" target="_blank">Forgot your password?</a>
                             </div>
                         </div>
 

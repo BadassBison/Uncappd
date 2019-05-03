@@ -41,6 +41,7 @@ const Splash = ({ currentUser, signOut }) => {
         <hgroup className="header-group">
           <h2 className="header-name">Hi, {currentUser.username}!</h2>
           <button className="header-button" onClick={signOut}>Log Out</button>
+          
         </hgroup>
     );
 

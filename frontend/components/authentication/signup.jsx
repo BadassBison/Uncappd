@@ -210,7 +210,7 @@ class SignUp extends React.Component {
                         </div>
 
                         <div className="privacy-statement">
-                            <p>You must be of legal drinking age in your country to join Untappd. By clicking Create Account, you agree to our <a href="#" >Terms of Use</a> and our <a href="#">Privacy Policy</a></p>
+                            <p>You must be of legal drinking age in your country to join Untappd. By clicking Create Account, you agree to our <a href="https://github.com/BadassBison/Uncappd/wiki" target="_blank" >Terms of Use</a> and our <a href="https://github.com/BadassBison/Uncappd/wiki" target="_blank">Privacy Policy</a></p>
                         </div>
 
                         <div className="submit-form">
