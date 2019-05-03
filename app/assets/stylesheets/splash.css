@@ -45,6 +45,10 @@
     padding: 80px 0;
 }
 
+.left-content p {
+    width: 80%;
+}
+
 .uncappd-logo {
     display: flex;
     justify-content: center;
@@ -81,9 +85,9 @@
     padding: 16px 20px;
     color: white;
     box-sizing: border-box;
-    -webkit-transition: -webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
-    transition-property: width,height,transform,background,font-size,opacity;
-    transition-duration: 1s,1s,1s,1s,1s,1s;
+    -webkit-transition: opacity 1s, background 1s, color 1s;
+    transition-property: background, color, opacity;
+    transition-duration: 0.4s, 0.4s, 0.4s;
 }
 
 #link-wrapper a:hover {

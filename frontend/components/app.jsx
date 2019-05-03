@@ -5,13 +5,15 @@ import Splash from './splash_container';
 import SignUp from './authentication/signup_container';
 import LogIn from './authentication/login_container';
 
+
 const App = ({ children }) => (
     <div>
       <Switch>
         <AuthRoute path="/login" component={LogIn} />
         <AuthRoute path="/signup" component={SignUp} />
-        <Route path="/" component={Splash} />
+        
       </Switch>
+        <Route path="/" component={Splash} />
         
       
     </div>
@@ -21,6 +23,8 @@ const App = ({ children }) => (
 
 //     <Route exact path="/" component={} /> 
 // 
+
+//  <Route path="/home" component={NavBar}
 //  Components
 // 
 // splash

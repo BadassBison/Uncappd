@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
+import NavBar from './navbar/navbar';
 
 const Splash = ({ currentUser, signOut }) => {
 
@@ -15,7 +16,7 @@ const Splash = ({ currentUser, signOut }) => {
             </div>
             <div className="main-wrapper">
                 <div className="left-content">
-                    <div className="uncappd-logo"><img src="https://untappd.akamaized.net/assets/custom/homepage/images/ut-logo-bottles.svg" alt="untappd logo" /></div>
+                    <div className="uncappd-logo"><img src={window.logoWhiteURL} /></div>
                     <div className="little-hr"></div>
                     <p className="discover">Discover and share your favorite beer.</p>
                     <div className="facebook-login">
@@ -39,6 +40,7 @@ const Splash = ({ currentUser, signOut }) => {
 
     const personalGreeting = () => (
         <hgroup className="header-group">
+            <NavBar />
           <h2 className="header-name">Hi, {currentUser.username}!</h2>
           <button className="header-button" onClick={signOut}>Log Out</button>
           

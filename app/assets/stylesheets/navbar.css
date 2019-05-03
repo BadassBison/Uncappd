@@ -1,0 +1,61 @@
+.nav-wrapper {
+    display: flex;
+    background: #FFC919;
+}
+
+.nav-logo {
+    margin-left: 40px;
+    width: 20%;
+}
+
+.nav-logo img {
+    width: 165px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.user-icon {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.user-icon img {
+    width: 100%
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-left {
+    margin-right: 80px;
+}
+
+.nav-left a {
+    margin: 0 20px;
+}
+
+.nav-right input {
+    box-sizing: border-box;
+    height: 30px;
+    width: 200px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.user-dropdown {
+    position: absolute;
+    right: 50px;
+}
