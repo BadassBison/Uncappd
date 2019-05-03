@@ -21,7 +21,7 @@ input:focus { outline: none}
 #signup-form {
     position: relative;
     background: white;
-    height: 90%;
+    /* height: 90%; */
     width: 36%;
 
 }
@@ -33,12 +33,15 @@ input:focus { outline: none}
     margin: 5px 0;
     border: 1px solid lightgray;
     border-radius: 3px;
-    padding-left: 15px;
+    padding: 8px;
+}
+
+#signup-form .logo {
+    padding-left: 40px;
 }
 
 #signup-form input[type=text]::placeholder{
     color: silver;
-    text-indent: 1em;
     font-size: 1.3em;
 }
 
@@ -69,6 +72,16 @@ input:focus { outline: none}
 }
 #signup-form input[type=button]:hover{
     background: greenyellow;
+}
+
+.fas {
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+    border-right: 1px solid lightgray;
+    border-radius: 2px;
+    color: lightgray;
+    padding-right: 10px;
 }
 
 .row {

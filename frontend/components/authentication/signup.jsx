@@ -117,11 +117,13 @@ class SignUp extends React.Component {
 
                         <div className="row">
                             <div className="form-field">
-                                <input type="text" id='username' className="input" name="user[username]" placeholder="Username" onChange={this.onChange("username")} />
+                                <input type="text" id='username' className="input logo" name="user[username]" placeholder="Username" onChange={this.onChange("username")} />
+                                <i class="fas fa-user"></i>
                             </div>
                             
                             <div className="form-field">
-                                <input type="text" id="email" className="input" name="user[email]" placeholder="Email" onChange={this.onChange("email")} /><br />
+                                <input type="text" id="email" className="input logo" name="user[email]" placeholder="Email" onChange={this.onChange("email")} /><br />
+                                <i class="fas fa-envelope"></i>
                             </div>
                         </div>
 
@@ -131,11 +133,13 @@ class SignUp extends React.Component {
                         
                         <div className="row">
                             <div className="form-field">
-                                <input type="text" id="pass1" className="input" name="user[password]" placeholder="password" onChange={this.onChange("password")} />
+                                <input type="text" id="pass1" className="input logo" name="user[password]" placeholder="password" onChange={this.onChange("password")} />
+                                <i class="fas fa-lock"></i>
                             </div>
                             
                             <div className="form-field">
-                                <input type="text" id="pass2" className="input" name="user[repeat_password]" placeholder="Repeat Password" onChange={this.onChange("repeatPass")} />
+                                <input type="text" id="pass2" className="input logo" name="user[repeat_password]" placeholder="Repeat Password" onChange={this.onChange("repeatPass")} />
+                                <i class="fas fa-lock"></i>
                             </div>
                         </div>
 

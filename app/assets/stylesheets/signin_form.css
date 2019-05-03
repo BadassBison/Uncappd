@@ -37,7 +37,7 @@
 .or {
     display: flex;
     justify-content: center;
-
+    margin-bottom: 8px;
 }
 
 .or span {
@@ -56,19 +56,43 @@
 }
 
 .signin-field {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.icon-wrapper {
     display: flex;
     justify-content: center;
-    margin: 8px 0;
+}
+
+#fa1, #fa2 {
+    border-right: 0;
+}
+
+#fa1::before, #fa2::before {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    border-right: 1px solid lightgray;
+    border-radius: 2px;
+    color: lightgray;
+    text-align: center;
+    padding-right: 10px;
 }
 
 .signin-field input {
     width: 73%;
     height: 35px;
     box-sizing: border-box;
-    padding: 15px;
+    padding-left: 40px;
 }
 
-.submit-form input[type=submit]{
+.signin-form {
+    display: flex;
+    justify-content: center;
+}
+
+.signin-form input[type=submit]{
     width: 35%;
     height: 45px;
     color: white;
@@ -81,11 +105,11 @@
     border-radius: 3px;
 }
 
-.submit-form input[type=submit]:hover {
+.signin-form input[type=submit]:hover {
     background: goldenrod;
 }
 
-.submit-form input[type=button] {
+.signin-form input[type=button] {
     width: 35%;
     height: 45px;
     color: white;
@@ -96,9 +120,10 @@
     background: limegreen;
     border: none;
     border-radius: 3px;
+    margin-left: 9px;
 }
 
-.submit-form input[type=button]:hover {
+.signin-form input[type=button]:hover {
     background: greenyellow;
 }
 
@@ -140,3 +165,4 @@
 }
 
 .link:hover { color: tomato; }
+

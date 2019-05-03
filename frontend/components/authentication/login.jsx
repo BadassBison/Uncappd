@@ -84,14 +84,20 @@ class LogIn extends React.Component {
                         <div className="or"><span><p>OR</p></span></div>
 
                         <div className="signin-field">
-                            <input type="text" id="username" className="input" name="user[username]" placeholder="Username" onChange={this.onChange("username")}/> 
+                            <div className="icon-wrapper">
+                                <i className="fas fa-user" id="fa1"></i>
+                                <input type="text" id="username" className="input" name="user[username]" placeholder="Username" onChange={this.onChange("username")}/> 
+                            </div>
                         </div>
                         
                         <div className="signin-field">
-                            <input type="text" id="password" className="input" name="user[password]" placeholder="password" onChange={this.onChange("password")} />
+                            <div className="icon-wrapper">
+                                <i className="fas fa-lock" id="fa2"></i>
+                                <input type="text" id="password" className="input" name="user[password]" placeholder="password" onChange={this.onChange("password")} />
+                            </div>
                         </div>
 
-                        <div className="submit-form">
+                        <div className="signin-form">
                             <input type="submit" value="Sign In" />
                             <input type="button" value="Demo User" onClick={this.demoUser} />
                         </div>
