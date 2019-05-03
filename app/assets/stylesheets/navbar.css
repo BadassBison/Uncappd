@@ -1,6 +1,12 @@
+.wrapper {
+    position: fixed;
+    width: 100%;
+}
+
 .nav-wrapper {
     display: flex;
     background: #FFC919;
+    width: 100%;
 }
 
 .nav-logo {

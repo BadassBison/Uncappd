@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Post from './post';
 
-class Posts extends React.Component {
+class Post extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -22,18 +21,13 @@ class Posts extends React.Component {
 
     render() {
         return (
-            <div className="posts-wrapper">
-                <h3>Recent Posts</h3>
-                <div className="post"><Post /></div>
-                <div className="post"><Post /></div>
-                <div className="post"><Post /></div>
-                <div className="post"><Post /></div>
+            <div className="post-wrapper">
+                <p>Post Header</p>
+                <p>Image</p>
+                <p>Post Footer</p>
             </div>
         )
     }
 };
   
-export default Posts;
-
-
-//  required pattern="banana|cherry"
+export default Post;

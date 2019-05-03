@@ -5,6 +5,7 @@ import Splash from './splash_container';
 import SignUp from './authentication/signup_container';
 import LogIn from './authentication/login_container';
 import NavBar from './navbar/navbar_container';
+import Posts from './posts/posts_container';
 
 
 const App = ({ children }) => (
@@ -13,7 +14,7 @@ const App = ({ children }) => (
       <Switch>
         <AuthRoute path="/login" component={LogIn} />
         <AuthRoute path="/signup" component={SignUp} />
-        <ProtectedRoute path="/home" component={NavBar} />
+        <ProtectedRoute path="/home" component={Posts} />
         <AuthRoute exact path="/" component={Splash} />
         <Redirect to="/" />
       </Switch>
