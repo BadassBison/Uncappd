@@ -40,7 +40,6 @@ const Splash = ({ currentUser, signOut }) => {
 
     const personalGreeting = () => (
         <hgroup className="header-group">
-            <NavBar />
           <h2 className="header-name">Hi, {currentUser.username}!</h2>
           <button className="header-button" onClick={signOut}>Log Out</button>
           

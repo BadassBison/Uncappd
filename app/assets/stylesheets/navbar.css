@@ -50,7 +50,7 @@
 .nav-right input {
     box-sizing: border-box;
     height: 30px;
-    width: 200px;
+    width: 250px;
     border-radius: 3px;
     padding-left: 10px;
 }
@@ -58,4 +58,11 @@
 .user-dropdown {
     position: absolute;
     right: 50px;
+}
+
+.logout-btn {
+    outline: none;
+    border: none;
+    padding: 0;
+    background: none;
 }
