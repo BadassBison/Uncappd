@@ -30,9 +30,7 @@ const Splash = ({ currentUser, signOut }) => {
                 </div>
 
                 
-                <div className="right-content">
-                    <img src="https://untappd.akamaized.net/assets/custom/homepage/images/masthead-img-main.png" alt="Phone discover crop right" className="masthead-img" />
-                </div>
+                <div className="right-content"></div>
                 
             </div>
         </div>

@@ -19,7 +19,6 @@
 #login-form {
     position: relative;
     background: white;
-    height: 54%;
     max-width: 400px;
 }
 
@@ -34,6 +33,7 @@
 }
 
 .facebook-login {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
 }
@@ -160,7 +160,7 @@
 .signup-link {
     display: flex;
     justify-content: center;
-    margin-top: 17px;
+    margin: 17px 0;
 }
 
 .link {

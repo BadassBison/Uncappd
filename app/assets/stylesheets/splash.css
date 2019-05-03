@@ -21,9 +21,13 @@
 }
 
 .right-content {
+    background-image: url("https://untappd.akamaized.net/assets/custom/homepage/images/masthead-img-main.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 35px;
     padding-top: 35px;
     box-sizing: border-box;
-    height: 80vh;
+    height: 85vh;
     width: 50%;
 }
 
@@ -55,7 +59,7 @@
 }
 
 .masthead-img {
-
+    background-size: contain;
 }
 
 #link-wrapper {
