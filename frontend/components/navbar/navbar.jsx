@@ -10,7 +10,11 @@ class NavBar extends React.Component {
     }
 
     componentDidMount() {
-        this.demo();
+        if (this.props.currentUser) this.demo();
+    }
+
+    componentDidUpdate() {
+        if (this.props.currentUser) this.demo();
     }
 
     demo() {
@@ -31,6 +35,7 @@ class NavBar extends React.Component {
     }
     
     render() {
+        if (!this.props.currentUser) return null;
         return ( 
         <>
         <div className="nav-wrapper">

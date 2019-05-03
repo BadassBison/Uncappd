@@ -5,12 +5,12 @@ import { signOut } from '../../actions/session_actions';
 
 
 
-const mapSTP = (state, ownProps) => {
-    
-}
+const mapSTP = (state, ownProps) => ({
+    currentUser: state.entities.users[state.session.id]
+})
 
 const mapDTP = dispatch => ({
     signOut: () => dispatch(signOut())
 })
 
-export default connect(null, mapDTP)(NavBar);
+export default connect(mapSTP, mapDTP)(NavBar);

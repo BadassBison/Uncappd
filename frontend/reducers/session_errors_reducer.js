@@ -13,7 +13,7 @@ const sessionErrorsReducer = (state = [], action) => {
           return [];
 
         case RECEIVE_ERRORS:
-          return merge([], state, {sigin: action});
+          return action.errors;
 
         default:
           return state;
