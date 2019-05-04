@@ -40,7 +40,6 @@ class LogIn extends React.Component {
             new Typed("#password", password);
             this.setState({ password: "123456" })
         }, 600);
-        
     }
     
     onChange(field){

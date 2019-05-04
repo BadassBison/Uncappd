@@ -1,0 +1,16 @@
+.personal-page-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contents-wrapper {
+    width: 100%;
+    margin: 0 50px;
+}
+
+header {
+    height: 300px;
+    width: 100%;
+    background: orange;
+}
