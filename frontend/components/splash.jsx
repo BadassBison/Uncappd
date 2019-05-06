@@ -50,7 +50,7 @@ const Splash = ({ currentUser, signOut }) => {
 };  
 
 function responseFacebook(response) {
-    console.log("response")
+    console.log(response)
 }
 
 function componentClicked() {
