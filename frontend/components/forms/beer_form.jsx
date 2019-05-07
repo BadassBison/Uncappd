@@ -6,9 +6,9 @@ class BeerForm extends React.Component {
         super(props)
         this.state = {
             name: '',
-            beerType: '',
-            rating: '',
-            breweryId: ''
+            beer_type: 'lager',
+            rating: 1,
+            brewery_id: 1
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -37,27 +37,27 @@ class BeerForm extends React.Component {
                         
                         
                         <label htmlFor="form-beer-type">Beer Type:</label>
-                        <input type="text" name="beer[beer_type]" onChange={this.onChange("beer_type")} />
-                        {/* <select className="form-beer-type" id="form-beer-type">
-                            <option>Lager</option>
-                            <option>IPA</option>
-                        </select> */}
+                        {/* <input type="text" name="beer[beer_type]" onChange={this.onChange("beer_type")} /> */}
+                        <select className="form-beer-type" id="form-beer-type" name="beer[beer_type]" onChange={this.onChange("beer_type")}>
+                            <option value="lager">Lager</option>
+                            <option value="ipa">IPA</option>
+                        </select>
                         
 
                         <label htmlFor="form-rating">Rating:</label>
-                        <input type="text" name="beer[rating]" onChange={this.onChange("rating")} />
-                        {/* <select className="form-rating" id="form-rating">
+                        {/* <input type="text" name="beer[rating]" onChange={this.onChange("rating")} /> */}
+                        <select className="form-rating" id="form-rating" name="beer[rating]" onChange={this.onChange("rating")}>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
-                        </select> */}
+                        </select>
 
                         <label htmlFor="form-brewery">Brewery:</label>
-                        <input type="text" name="beer[brewery_id]" onChange={this.onChange("brewery_id")} />
-                        {/* <select className="form-brewery" id="form-brewery">
-                            <option>New Belgium</option>
-                            <option>Bells</option>
-                        </select> */}
+                        {/* <input type="text" name="beer[brewery_id]" onChange={this.onChange("brewery_id")} /> */}
+                        <select className="form-brewery" id="form-brewery" name="beer[brewery_id]" onChange={this.onChange("brewery_id")}>
+                            <option value="1">New Belgium</option>
+                            <option value="2">Bells</option>
+                        </select>
 
                         <input type="submit" value="Submit"/>
 

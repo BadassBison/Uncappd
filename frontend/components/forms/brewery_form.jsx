@@ -7,7 +7,7 @@ class BreweryForm extends React.Component {
         this.state = {
             name: '',
             location: '',
-            category: ''
+            category: 'regional'
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -19,7 +19,9 @@ class BreweryForm extends React.Component {
     }
 
     onChange(field){
-        return e => this.setState({ [field]: e.target.value });
+        return e => {
+            this.setState({ [field]: e.target.value }
+            )};
     }
 
     render() {
@@ -37,11 +39,10 @@ class BreweryForm extends React.Component {
                         
                         
                         <label htmlFor="form-category">Category:</label>
-                        <input type="text" className="form-content" id="form-content" name="brewery[category]"  onChange={this.onChange("category")} />
-                        {/* <select className="form-beer-type" id="form-beer-type">
-                            <option>Regional</option>
-                            <option>Micro Brewery</option>
-                        </select> */}
+                        <select className="form-beer-type" id="form-beer-type" name="brewery[category]"  onChange={this.onChange("category")}>
+                            <option value="regional">Regional</option>
+                            <option value="micro">Micro Brewery</option>
+                        </select>
 
                         <input type="submit" value="Submit"/>
                         

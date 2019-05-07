@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { signIn } from '../../actions/session_actions';
+import { signIn, clearErrors } from '../../actions/session_actions';
 import LogIn from './login';
 
 const mapSTP = (state, ownProps) => {
@@ -10,7 +10,8 @@ const mapSTP = (state, ownProps) => {
 }
 
 const mapDTP = dispatch => ({
-    signIn: user => dispatch(signIn(user))
+    signIn: user => dispatch(signIn(user)),
+    clearErrors: () => dispatch(clearErrors())
 })
 
 export default connect(mapSTP, mapDTP)(LogIn)

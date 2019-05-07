@@ -19,11 +19,10 @@ class VenueForm extends React.Component {
     }
 
     onChange(field){
-        return e => this.setState({ [field]: e.target.value });
-    }
-
-    onSelectChange(value){
-        return e => this.setState({ category: value });
+        return e => {
+            // debugger
+            this.setState({ [field]: e.target.value }
+            )};
     }
 
     render() {
@@ -41,11 +40,10 @@ class VenueForm extends React.Component {
                         
                         
                         <label htmlFor="form-category">Category:</label>
-                        <input type="text" className="form-content" id="form-content" name="venue[category]"  onChange={this.onChange("category")} />
-                        {/* <select className="form-beer-type" id="form-beer-type" name="venue[category]"  onChange={this.onSelectChange()}>
+                        <select className="form-beer-type" id="form-beer-type" name="venue[category]"  onChange={this.onChange("category")}>
                             <option value="regional">Regional</option>
                             <option value="micro">Micro Brewery</option>
-                        </select> */}
+                        </select>
 
                         <input type="submit" value="Submit"/>
                         

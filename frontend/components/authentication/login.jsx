@@ -59,6 +59,10 @@ class LogIn extends React.Component {
         console.log("clicked")
     }
 
+    componentWillUnmount(){
+        this.props.clearErrors();
+    }
+
     render() {
         return (
             <div>
