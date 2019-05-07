@@ -12,5 +12,6 @@
 header {
     height: 300px;
     width: 100%;
-    background: orange;
+    background-image: url(https://untappd.akamaized.net/site/assets/v3/images/cover_default.jpg);
+    background-size: cover;
 }

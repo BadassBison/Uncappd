@@ -6,6 +6,10 @@ import SignUp from './authentication/signup_container';
 import LogIn from './authentication/login_container';
 import NavBar from './navbar/navbar_container';
 import PersonalPage from './personal_page/personal_page_container';
+import PostForm from './forms/post_form';
+import BeerForm from './forms/beer_form';
+import BreweryForm from './forms/brewery_form';
+import VenueForm from './forms/venue_form';
 
 const App = ({ children }) => (
     <div>
@@ -13,6 +17,10 @@ const App = ({ children }) => (
       <Switch>
         <AuthRoute path="/login" component={LogIn} />
         <AuthRoute path="/signup" component={SignUp} />
+        <ProtectedRoute path="/addpost" component={PostForm} />
+        <ProtectedRoute path="/addbeer" component={BeerForm} />
+        <ProtectedRoute path="/addbrewery" component={BreweryForm} />
+        <ProtectedRoute path="/addvenue" component={VenueForm} />
         <ProtectedRoute path="/home" component={PersonalPage} />
         <AuthRoute exact path="/" component={Splash} />
         <Redirect to="/" />
@@ -23,10 +31,7 @@ const App = ({ children }) => (
   
   export default App;
 
-//     <Route exact path="/" component={} /> 
-// 
 
-//  <Route path="/home" component={NavBar}
 //  Components
 // 
 // splash
@@ -37,6 +42,3 @@ const App = ({ children }) => (
 // beer profile page
 // brewery profile page
 // venue profile page
-// 
-// <Route exact path="/" component={} />
-// <Switch></Switch>

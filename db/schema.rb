@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_30_211234) do
+ActiveRecord::Schema.define(version: 2019_05_06_140102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "beers", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "beer_type", null: false
+    t.integer "rating", null: false
+    t.integer "brewery_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brewery_id"], name: "index_beers_on_brewery_id"
+  end
+
+  create_table "breweries", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "location", null: false
+    t.string "category", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "content", null: false
+    t.integer "rating", null: false
+    t.integer "user_id", null: false
+    t.integer "beer_id", null: false
+    t.integer "venue_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["beer_id"], name: "index_posts_on_beer_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+    t.index ["venue_id"], name: "index_posts_on_venue_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -30,6 +61,14 @@ ActiveRecord::Schema.define(version: 2019_04_30_211234) do
     t.datetime "updated_at", null: false
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "venues", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "location", null: false
+    t.string "category", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

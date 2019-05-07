@@ -170,3 +170,9 @@
 
 .link:hover { color: tomato; }
 
+.signin-errors {
+    color: red;
+    text-align: center;
+    margin-left: 90px;
+}
+

@@ -31,6 +31,7 @@ class User < ApplicationRecord
     end
     
     attr_reader :password
+    has_many :posts
 
     def password=(password)
         @password = password
