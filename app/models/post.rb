@@ -14,7 +14,7 @@
 
 class Post < ApplicationRecord
 
-    validates :content, :rating, :user_id, :beer_id, venue_id,  presence: true
+    validates :content, :rating, :user_id, :beer_id, :venue_id,  presence: true
 
     belongs_to :user
     belongs_to :beer

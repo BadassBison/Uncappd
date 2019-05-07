@@ -1,0 +1,32 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    outline: 3px solid black;
+    padding: 5px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin-top: 15px;
+}
+
+.form-content {
+
+}
+
+.form-beer {
+
+}
+
+.form-venue {
+
+}

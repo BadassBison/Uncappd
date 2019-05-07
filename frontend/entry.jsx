@@ -4,6 +4,8 @@ import { getState, dispatch } from 'redux';
 import configureStore from './store/store';
 import Root from './components/root';
 import { signUp, signIn, signOut } from './actions/session_actions';
+// import { makePost } from './actions/form_actions';
+import { makePost } from './util/form_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -27,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signOut = signOut;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.makePost = makePost;
   
   ReactDOM.render(<Root store={store} />, root);
 });

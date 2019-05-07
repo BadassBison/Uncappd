@@ -1,0 +1,1 @@
+json.partial! '/api/brewerys/brewery', brewery: @brewery

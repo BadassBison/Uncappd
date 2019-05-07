@@ -6,10 +6,10 @@ import SignUp from './authentication/signup_container';
 import LogIn from './authentication/login_container';
 import NavBar from './navbar/navbar_container';
 import PersonalPage from './personal_page/personal_page_container';
-import PostForm from './forms/post_form';
-import BeerForm from './forms/beer_form';
-import BreweryForm from './forms/brewery_form';
-import VenueForm from './forms/venue_form';
+import PostForm from './forms/post_form_container';
+import BeerForm from './forms/beer_form_container';
+import BreweryForm from './forms/brewery_form_container';
+import VenueForm from './forms/venue_form_container';
 
 const App = ({ children }) => (
     <div>
@@ -42,3 +42,6 @@ const App = ({ children }) => (
 // beer profile page
 // brewery profile page
 // venue profile page
+
+//
+ //      

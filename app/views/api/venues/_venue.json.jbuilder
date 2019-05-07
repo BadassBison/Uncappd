@@ -1,0 +1,1 @@
+json.extract! venue, :name, :location, :category
