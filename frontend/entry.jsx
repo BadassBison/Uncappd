@@ -5,14 +5,18 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { signUp, signIn, signOut } from './actions/session_actions';
 // import { makePost } from './actions/form_actions';
-import { makePost } from './util/form_api_util';
+import { makePost, makeBeer, makeBrewery, makeVenue } from './util/form_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
     const preloadedState = {
       entities: {
-        users: { [window.currentUser.id]: window.currentUser }
+        users: { [window.currentUser.id]: window.currentUser },
+        posts: {},
+        beers: {},
+        brewerys: {},
+        venues: {}
       },
       session: { id: window.currentUser.id }
     };
@@ -30,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.makePost = makePost;
+  window.makeBeer = makeBeer;
+  window.makeBrewery = makeBrewery;
+  window.makeVenue = makeVenue;
   
   ReactDOM.render(<Root store={store} />, root);
 });

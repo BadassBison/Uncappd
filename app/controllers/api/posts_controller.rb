@@ -30,7 +30,7 @@ class Api::PostsController < ApplicationController
 
     private
       def post_params
-        params.require(:post).permit(:content, :rating, :user_id, :beer_id, :venue_id)
+        params.require(:post).permit(:content, :user_id, :beer_id, :venue_id)
       end
 
 end
