@@ -2,9 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Post from './post';
 
-const mapSTP = (state, ownProps) => ({
-    currentUser: state.entities.users[state.session.id]
-})
+const mapSTP = (state, ownProps) => {
+    
+    // debugger
+    return( 
+        {
+            currentUser: state.entities.users[state.session.id],
+            // beer: state.entities.beers[ownProps.post.beerId],
+            // brewery: state.entities.brewerys[ownProps.post.breweryId],
+            // venue: state.entities.venues[ownProps.post.venueId]
+        }
+    )
+}
 
 const mapDTP = dispatch => ({
     

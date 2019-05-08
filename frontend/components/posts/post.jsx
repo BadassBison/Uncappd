@@ -10,27 +10,17 @@ import { Link } from 'react-router-dom';
 class Post extends React.Component {
     constructor(props){
         super(props)
-        this.state = {
-            username: '',
-            password: ''
-        }
-    }
-    
-    onChange(field){
-        return e => this.setState({ [field]: e.target.value });
-    }
-    
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.signIn(this.state);
     }
 
     render() {
+        let user = this.props.currentUser;
         return (
-            <div className="post-wrapper">
-                <p>Post Header</p>
-                <p>Image</p>
-                <p>Post Footer</p>
+            <div key={this.props.key} className="post-wrapper">
+                <p>{user.fName} {user.lName}</p><br />
+                <p>{this.props.post.content}</p><br />
+                <p>{this.props.post.rating}</p><br />
+                <p>{this.props.post.beerId}</p><br />
+                <p>{this.props.post.venueId}</p><br />
             </div>
         )
     }

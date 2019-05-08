@@ -5,29 +5,29 @@ import Post from './post_container';
 class Posts extends React.Component {
     constructor(props){
         super(props)
-        this.state = {
-            username: '',
-            password: ''
-        }
+        this.allPosts;
     }
-    
-    onChange(field){
-        return e => this.setState({ [field]: e.target.value });
-    }
-    
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.signIn(this.state);
+
+    componentDidMount(){
+        this.props.fetchPosts();
+        this.props.fetchBeers();
+        this.props.fetchBrewerys();
+        this.props.fetchVenues();
     }
 
     render() {
+        if(this.props.posts.length !== 0) {
+            this.allPosts = this.props.posts.map(
+                post => {
+                    return <div className="post"><Post post={post} key={post.id} /></div>
+                }
+            )
+        }
+        
         return (
             <div className="posts-wrapper">
                 <h3>Recent Posts</h3>
-                <div className="post"><Post /></div>
-                <div className="post"><Post /></div>
-                <div className="post"><Post /></div>
-                <div className="post"><Post /></div>
+                {this.allPosts}
             </div>
         )
     }

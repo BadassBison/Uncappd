@@ -1,5 +1,11 @@
 // Posts
 
+export const fetchPosts = () => (
+    $.ajax({ 
+        url: 'api/posts', 
+        method: 'GET'
+    })
+)
 export const makePost = post => (
     $.ajax({ 
         url: 'api/posts', 
@@ -7,14 +13,12 @@ export const makePost = post => (
         data: {post} 
     })
 )
-
 export const deletePost = postId => (
     $.ajax({ 
         url: `api/posts/${postId}`, 
         method: 'DELETE'
     })
 )
-
 export const updatePost = post => (
     $.ajax({ 
         url: `api/posts/${post}`, 
@@ -23,6 +27,12 @@ export const updatePost = post => (
 )
 
 // Beers
+export const fetchBeers = () => (
+    $.ajax({ 
+        url: 'api/beers', 
+        method: 'GET'
+    })
+)
 export const makeBeer = beer => (
     $.ajax({ 
         url: 'api/beers', 
@@ -37,7 +47,6 @@ export const deleteBeer = beerId => (
         method: 'DELETE'
     })
 )
-
 export const updatebeer = beer => (
     $.ajax({ 
         url: `api/beers/${beer}`, 
@@ -46,6 +55,12 @@ export const updatebeer = beer => (
 )
 
 // Brewery
+export const fetchBrewerys = () => (
+    $.ajax({ 
+        url: 'api/brewerys', 
+        method: 'GET'
+    })
+)
 export const makeBrewery = brewery => (
     $.ajax({ 
         url: 'api/brewerys', 
@@ -53,14 +68,12 @@ export const makeBrewery = brewery => (
         data: {brewery} 
     })
 )
-
 export const deletebrewery = breweryId => (
     $.ajax({ 
         url: `api/brewerys/${breweryId}`, 
         method: 'DELETE'
     })
 )
-
 export const updatebrewery = brewery => (
     $.ajax({ 
         url: `api/brewerys/${brewery}`, 
@@ -69,6 +82,12 @@ export const updatebrewery = brewery => (
 )
 
 // Venue
+export const fetchVenues = () => (
+    $.ajax({ 
+        url: 'api/venues', 
+        method: 'GET'
+    })
+)
 export const makeVenue = venue => (
     $.ajax({ 
         url: 'api/venues', 
@@ -76,14 +95,12 @@ export const makeVenue = venue => (
         data: {venue} 
     })
 )
-
 export const deleteVenue = VenueId => (
     $.ajax({ 
         url: `api/Venues/${VenueId}`, 
         method: 'DELETE'
     })
 )
-
 export const updateVenue = Venue => (
     $.ajax({ 
         url: `api/Venues/${Venue}`, 

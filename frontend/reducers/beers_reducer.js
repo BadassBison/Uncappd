@@ -1,12 +1,16 @@
 import {
-    RECEIVE_BEER
+  RECEIVE_ALL_BEERS,
+  RECEIVE_BEER
 } from '../actions/form_actions';
 import merge from 'lodash/merge';
 
 const beersReducer = (state = {}, action) => {
     
     Object.freeze(state);
+    
     switch(action.type){
+        case RECEIVE_ALL_BEERS:
+          return action.beers;
 
         case RECEIVE_BEER:
           return merge({}, state, { [action.beer.id]: action.beer });

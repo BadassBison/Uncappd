@@ -1,5 +1,9 @@
 class Api::VenuesController < ApplicationController
 
+    def index
+      @venues = Venue.all
+    end
+
     def create
         @venue = Venue.new(venue_params)
         if @venue.save

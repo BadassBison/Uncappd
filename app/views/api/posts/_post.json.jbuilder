@@ -1,1 +1,1 @@
-json.extract! post, :content, :rating, :user_id, :beer_id, :venue_id
+json.extract! post, :id, :content, :rating, :user_id, :beer_id, :venue_id

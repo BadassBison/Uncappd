@@ -1,5 +1,9 @@
 class Api::BeersController < ApplicationController
 
+    def index
+      @beers = Beer.all
+    end
+  
     def create
         @beer = Beer.new(beer_params)
         if @beer.save
