@@ -2,7 +2,6 @@ class Api::BeersController < ApplicationController
 
     def create
         @beer = Beer.new(beer_params)
-        debugger
         if @beer.save
           render :show
         else

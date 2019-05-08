@@ -20,7 +20,6 @@ class VenueForm extends React.Component {
 
     onChange(field){
         return e => {
-            // debugger
             this.setState({ [field]: e.target.value }
             )};
     }
