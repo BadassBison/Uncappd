@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { makeVenue } from '../../actions/form_actions';
-import VenueForm from './Venue_form';
+import VenueForm from './venue_form';
 
 const mapSTP = (state, ownProps) => ({
     
