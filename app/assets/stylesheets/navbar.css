@@ -4,6 +4,7 @@
     justify-content: center;
     width: 100%;
     background: #FFC919;
+    z-index: 10;
 }
 
 .nav-wrapper {

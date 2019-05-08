@@ -14,21 +14,22 @@ class Post extends React.Component {
 
     render() {
         let user = this.props.currentUser;
-        let brewery = this.props.brewery ? `from ${this.props.brewery.name}` : "";
+        let brewery = this.props.brewery ? `${this.props.brewery.name}` : "";
+        let from = this.props.brewery ? "from" : ""
         return (
             <div key={this.props.key} className="post-wrapper">
                 
                 <div className="post-top">
-                    <div className="profile-img"></div>
+                    <div className="profile-img"><img src={window.demoProfile} /></div>
                     <div className="post-info">
-                        <Link to="/home">{user.fName} {user.lName} </Link> 
+                        <Link to="/home"> {user.fName} {user.lName} </Link> 
                         is drinking 
-                        <Link to="/home">{this.props.beer.name} </Link> 
+                        <Link to="/home"> {this.props.beer.name} </Link> 
                         at 
-                        <Link to="/home">{this.props.venue.name} </Link> 
-                        <Link to="/home">{brewery}</Link>
+                        <Link to="/home"> {this.props.venue.name} </Link> 
+                        {from} <Link to="/home"> {brewery} </Link>
                     </div>
-                    <div className="beer-logo"></div>
+                    <div className="beer-logo"><img src={window.beerLogo} /></div>
                 </div>
                 
                 <div className="post-body">
@@ -38,7 +39,7 @@ class Post extends React.Component {
                         <p>Rating: {this.props.post.rating}</p>
                     </div>
                     <div className="post-image"></div>
-                    <span className="post-time"></span>
+                    <span className="post-time">5 May 19</span>
                     <span className="post-show"><Link to="/home">View Detailed Check-in</Link></span>
                 </div>
             </div>

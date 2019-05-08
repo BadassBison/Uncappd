@@ -46,8 +46,15 @@ body {
 .profile-img {
     height: 52px;
     width: 52px;
-    background: lightblue;
     border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.profile-img img {
+    max-width: 100%;
 }
 
 .post-info {
@@ -64,13 +71,16 @@ body {
 .beer-logo {
     height: 42px;
     width: 42px;
-    background: lightpink;
+}
+
+.beer-logo img {
+    max-width: 100%;
 }
 
 .post-arrow {
     position: absolute;
     background: white;
-    left: 40px;
+    left: 30px;
     top: -10px;
     height: 20px;
     width: 20px;
@@ -83,7 +93,7 @@ body {
 .post-content {
     border: 1px solid lightgray;
     box-shadow: 0 1px 2px lightgray;
-    width: 515px;
+    width: 500px;
     box-sizing: border-box;
     padding: 10px;
     margin: 10px 0;
@@ -91,15 +101,17 @@ body {
 
 .post-image {
     height: 200px;
-    width: 515px;
+    width: 500px;
     background: lightgreen;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .post-time {
-    border: 1px solid red;
+    color: gray;
+    margin-right: 10px;
 }
 
-.post-show {
-    border: 1px solid red;
+.post-show a {
+    text-decoration: none;
+    color: #cc6600;
 }
