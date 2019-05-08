@@ -5,13 +5,42 @@
 }
 
 .contents-wrapper {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    margin: 0 50px;
 }
 
 header {
     height: 300px;
-    width: 100%;
+    width: 1024px;
     background-image: url(https://untappd.akamaized.net/site/assets/v3/images/cover_default.jpg);
     background-size: cover;
+}
+
+.page-contents {
+    display: flex;
+    justify-content: space-between;
+    width: 1024px;
+    margin-top: 80px;
+}
+
+.page-left {
+    box-sizing: border-box;
+    width: 700px;
+}
+
+.page-right {
+    box-sizing: border-box;
+    width: 300px;
+}
+
+.posts {
+    box-shadow: 0 1px 2px lightgray;
+}
+
+.box {
+    box-shadow: 0 1px 2px lightgray;
+    height: 200px;
+    background: white;
+    margin-bottom: 20px;
 }

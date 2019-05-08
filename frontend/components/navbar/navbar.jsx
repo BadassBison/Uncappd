@@ -49,23 +49,21 @@ class NavBar extends React.Component {
         <>
         <div className="wrapper">
             <div className="nav-wrapper">
-                <div className="nav-logo">
+                <div className="nav-left">
                     <Link to={"/"}><img src={window.navLogo} /></Link>
-                </div>
-                <div className="nav-links">
-                    <div className="nav-left">
+                    <div className="nav-links">
                         <a href="#">The Pub</a>
                         <a href="#">Top Rated</a>
                         <a href="#">Supporter</a>
                         <a href="#">Help</a>
                     </div>
+                </div>
 
-                    <div className="nav-right">
-                        <div className="user-icon">
-                            <button className="logout-btn" onClick={this.props.signOut}><img src={window.userIcon} /></button>
-                        </div>
-                        <input type="text" id="nav-bar-input" className="nav-search" />
+                <div className="nav-right">
+                    <div className="user-icon">
+                        <button className="logout-btn" onClick={this.props.signOut}><img src={window.userIcon} /></button>
                     </div>
+                    <input type="text" id="nav-bar-input" className="nav-search" />
                 </div>
             </div>
         </div>

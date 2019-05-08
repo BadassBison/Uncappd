@@ -16,7 +16,7 @@ class Posts extends React.Component {
     }
 
     render() {
-        if(this.props.posts.length !== 0) {
+        if(this.props.beers.length !== 0 && this.props.venues.length !== 0) {
             this.allPosts = this.props.posts.map(
                 post => {
                     return <div className="post"><Post post={post} key={post.id} /></div>

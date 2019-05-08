@@ -5,12 +5,10 @@ body {
 
 .posts-wrapper {
     display: flex;
-    width: 40%;
     flex-direction: column;
     box-sizing: border-box;
+    /* margin: 25px 25px 25px 0; */
     padding: 25px;
-    padding-top: 40px;
-    margin-left: 50px;
     background: white;
 }
 

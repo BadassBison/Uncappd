@@ -10,7 +10,9 @@ const beersReducer = (state = {}, action) => {
     
     switch(action.type){
         case RECEIVE_ALL_BEERS:
-          return action.beers;
+          let newState = {};
+          for (let beer of action.beers) { newState[beer.id] = beer }
+          return newState;
 
         case RECEIVE_BEER:
           return merge({}, state, { [action.beer.id]: action.beer });

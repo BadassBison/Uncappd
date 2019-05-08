@@ -1,1 +1,1 @@
-json.extract! brewery, :name, :location, :category
+json.extract! brewery, :id, :name, :location, :category

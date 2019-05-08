@@ -5,12 +5,13 @@ import Post from './post';
 const mapSTP = (state, ownProps) => {
     
     // debugger
+    
     return( 
         {
             currentUser: state.entities.users[state.session.id],
-            // beer: state.entities.beers[ownProps.post.beerId],
-            // brewery: state.entities.brewerys[ownProps.post.breweryId],
-            // venue: state.entities.venues[ownProps.post.venueId]
+            beer: state.entities.beers[ownProps.post.beerId],
+            brewery: state.entities.brewerys[state.entities.beers[ownProps.post.beerId].breweryId],
+            venue: state.entities.venues[ownProps.post.venueId]
         }
     )
 }

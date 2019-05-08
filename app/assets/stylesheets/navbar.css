@@ -1,26 +1,19 @@
 .wrapper {
     position: fixed;
+    display: flex;
+    justify-content: center;
     width: 100%;
+    background: #FFC919;
 }
 
 .nav-wrapper {
     display: flex;
-    background: #FFC919;
-    width: 100%;
+    justify-content: space-between;
+    width: 1024px;
 }
 
-.nav-logo {
-    margin-left: 40px;
-    width: 20%;
-}
-
-.nav-logo img {
+.nav-left img {
     width: 165px;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: flex-start;
 }
 
 .nav-wrapper a {
@@ -50,7 +43,7 @@
 }
 
 .nav-left a {
-    margin: 0 20px;
+    margin: 0 12px;
 }
 
 .nav-right input {

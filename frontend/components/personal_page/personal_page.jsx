@@ -5,10 +5,6 @@ import Posts from '../posts/post_index_container';
 class PersonalPage extends React.Component {
     constructor(props){
         super(props)
-        this.state = {
-            username: '',
-            password: ''
-        }
     }
     
     // onChange(field){
@@ -24,11 +20,24 @@ class PersonalPage extends React.Component {
         return (
             <>
                 <div className="personal-page-wrapper">
-                    <div className="contents-wrapper">
-                        <header></header>
+                    <div className="page-contents">
+                        {/* <div className="contents-wrapper">
+                            <header></header>
+                        </div> */}
+                        <div className="page-left">
+                            <div className="posts">
+                                <Posts />
+                            </div>
+                        </div>
+                        <div className="page-right">
+                            <div className="box"></div>
+                            <div className="box"></div>
+                            <div className="box"></div>
+                            <div className="box"></div>
+                        </div>
+
                     </div>
                 </div>
-                <Posts />
             </>
         )
     }

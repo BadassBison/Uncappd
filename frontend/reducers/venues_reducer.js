@@ -10,7 +10,9 @@ const venueReducer = (state = {}, action) => {
     switch(action.type){
 
         case RECEIVE_ALL_VENUES:
-          return action.venues;
+          let newState = {};
+          for (let venue of action.venues) { newState[venue.id] = venue }
+          return newState;  
 
         case RECEIVE_VENUE:
           return merge({}, state, { [action.venue.id]: action.venue });

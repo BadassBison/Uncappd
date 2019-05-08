@@ -14,13 +14,18 @@ class Post extends React.Component {
 
     render() {
         let user = this.props.currentUser;
+        let brewery = this.props.brewery ? `from ${this.props.brewery.name}` : "";
+        // debugger
         return (
             <div key={this.props.key} className="post-wrapper">
-                <p>{user.fName} {user.lName}</p><br />
+                
+                <p>
+                    <Link to="/home">
+                        {user.fName} {user.lName}
+                    </Link> is drinking {this.props.beer.name} at {this.props.venue.name} {brewery}
+                </p><br />
                 <p>{this.props.post.content}</p><br />
-                <p>{this.props.post.rating}</p><br />
-                <p>{this.props.post.beerId}</p><br />
-                <p>{this.props.post.venueId}</p><br />
+                <p>Rating: {this.props.post.rating}</p><br />
             </div>
         )
     }
