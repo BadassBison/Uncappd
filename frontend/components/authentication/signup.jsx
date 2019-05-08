@@ -52,6 +52,7 @@ class SignUp extends React.Component {
     demoUser(e) {
         e.preventDefault;
         this.clearInputs();
+        this.props.clearErrors();
 
         let a = this.makeid(8);
         // let a = 'bison';
@@ -173,7 +174,7 @@ class SignUp extends React.Component {
                             </div>
                         </div>
 
-                        <div className="row-space"></div>
+                        <div className="row-space signin-errors">{this.props.errors}</div>
 
                         <div className="row">
                             <div className="form-field">

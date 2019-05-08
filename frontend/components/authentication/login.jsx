@@ -23,6 +23,7 @@ class LogIn extends React.Component {
     demoUser(e) {
         e.preventDefault;
         this.clearInputs();
+        this.props.clearErrors();
 
         const username = {
             strings: ["Carlos"],
