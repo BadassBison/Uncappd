@@ -1,4 +1,4 @@
-.personal-page-wrapper {
+.page-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -32,10 +32,6 @@ header {
 .page-right {
     box-sizing: border-box;
     width: 300px;
-}
-
-.posts {
-    box-shadow: 0 1px 2px lightgray;
 }
 
 .box {

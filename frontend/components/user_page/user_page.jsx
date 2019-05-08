@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Posts from '../posts/post_index_container';
 
-class PersonalPage extends React.Component {
+class UserPage extends React.Component {
     constructor(props){
         super(props)
     }
@@ -10,9 +10,12 @@ class PersonalPage extends React.Component {
     render() {
         return (
             <>
+                <div className="contents-wrapper">
+                    <header></header>
+                </div>
                 <div className="page-wrapper">
                     <div className="page-contents">
-    
+                        
                         <div className="page-left">
                             <div className="posts">
                                 <Posts />
@@ -33,4 +36,4 @@ class PersonalPage extends React.Component {
     }
 };
   
-export default PersonalPage;
+export default UserPage;

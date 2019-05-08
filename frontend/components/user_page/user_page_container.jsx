@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PersonalPage from './personal_page';
+import UserPage from './user_page';
 
 
 const mapSTP = (state, ownProps) => ({
@@ -11,4 +11,4 @@ const mapDTP = dispatch => ({
     
 })
 
-export default connect(mapSTP, null)(PersonalPage);
+export default connect(mapSTP, null)(UserPage);
