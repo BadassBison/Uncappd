@@ -1,5 +1,6 @@
 import * as FormApiUtil from '../util/form_api_util';
 
+export const RECEIVE_ALL_POSTS = 
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const DELETE_POST = 'DELETE_POST';
 // export const UPDATE_POST = 'UPDATE_POST';

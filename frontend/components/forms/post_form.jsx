@@ -6,9 +6,10 @@ class PostForm extends React.Component {
         super(props)
         this.state = {
             content: '',
+            rating: 3,
             user_id: this.props.user,
-            beer_id: '1',
-            venue_id: '1'
+            beer_id: 1,
+            venue_id: 1
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -30,14 +31,18 @@ class PostForm extends React.Component {
                     <h2>Post Form</h2>
                     <form onSubmit={this.handleSubmit}>
                         
-                        {/* <input type="hidden" name="post[user_id]" value={this.props.user}/> */}
 
                         <label htmlFor="form-content">Review:</label>
                         <textarea className="form-content" id="form-content" name="post[content]" onChange={this.onChange("content")} required></textarea>
                         
+                        <label htmlFor="form-rating">Rating:</label>
+                        <select className="form-rating" id="form-rating" name="post[rating]" onChange={this.onChange("rating")}>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
                         
                         <label htmlFor="form-beer">Beer:</label>
-                        {/* <input type="text" name="post[beer_id]" onChange={this.onChange("beer_id")}/> */}
                         <select className="form-beer" id="form-beer" name="post[beer_id]" onChange={this.onChange("beer_id")}>
                             <option value="1">Bud Light</option>
                             <option value="2">Hop Slam</option>
@@ -45,7 +50,6 @@ class PostForm extends React.Component {
                         
 
                         <label htmlFor="form-venue">Venue:</label>
-                        {/* <input type="text" name="post[venue_id]"  onChange={this.onChange("venue_id")} /> */}
                         <select className="form-venue" id="form-venue" name="post[venue_id]" onChange={this.onChange("venue_id")}>
                             <option value="1">Patsies</option>
                             <option value="2">Good Fellas</option>

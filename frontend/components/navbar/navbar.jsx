@@ -6,6 +6,7 @@ class NavBar extends React.Component {
     
     constructor(props){
         super(props);
+        this.check = true;
         this.demo = this.demo.bind(this);
     }
 
@@ -14,7 +15,7 @@ class NavBar extends React.Component {
     }
 
     componentDidUpdate() {
-        if (this.props.currentUser) this.demo();
+        // if (this.props.currentUser) this.demo();
     }
 
     demo() {
@@ -25,17 +26,21 @@ class NavBar extends React.Component {
                 "If you like what you see...", 
                 "...go to the footer",
                 "I can tell you are amused by this",
-                "This website was my full stack...",
-                "...project through App Academy",
+                "I am happy I could entertain you",
+                "This website was my full stack project...",
+                "...through the rigorous App Academy",
                 "Knock, knock",
                 "Who's there?",
                 "Very long pause...",
                 "..."
             ],
-            typeSpeed: 100
+            typeSpeed: 140
         }
     
-        new Typed("#nav-bar-input", inputField);
+        if(this.check) {
+            new Typed("#nav-bar-input", inputField);
+            this.check = false;
+        }
     }
     
     render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Posts from '../posts/posts';
+import Posts from '../posts/post_index_container';
 
 class PersonalPage extends React.Component {
     constructor(props){
@@ -11,14 +11,14 @@ class PersonalPage extends React.Component {
         }
     }
     
-    onChange(field){
-        return e => this.setState({ [field]: e.target.value });
-    }
+    // onChange(field){
+    //     return e => this.setState({ [field]: e.target.value });
+    // }
     
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.signIn(this.state);
-    }
+    // handleSubmit(e) {
+    //     e.preventDefault();
+    //     this.props.signIn(this.state);
+    // }
 
     render() {
         return (

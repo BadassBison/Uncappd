@@ -8,8 +8,11 @@ const beersReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type){
 
-        // case RECEIVE_POST:
-        //   return merge({}, state, { [action.currentUser.id]: action.currentUser });
+        case RECEIVE_BEER:
+          return merge({}, state, { [action.beer.id]: action.beer });
+        
+        // case DELETE_BEER:
+        //   return {};
 
         default:
           return state;

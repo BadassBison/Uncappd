@@ -3,7 +3,6 @@ class CreateBeers < ActiveRecord::Migration[5.2]
     create_table :beers do |t|
       t.string :name, null: false
       t.string :beer_type, null: false
-      t.integer :rating, null: false
       t.integer :brewery_id, null: false
 
       t.timestamps

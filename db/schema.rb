@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_213212) do
+ActiveRecord::Schema.define(version: 2019_05_06_140102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2019_05_07_213212) do
   create_table "beers", force: :cascade do |t|
     t.string "name", null: false
     t.string "beer_type", null: false
-    t.integer "rating", null: false
     t.integer "brewery_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_07_213212) do
 
   create_table "posts", force: :cascade do |t|
     t.string "content", null: false
+    t.integer "rating", null: false
     t.integer "user_id", null: false
     t.integer "beer_id", null: false
     t.integer "venue_id"

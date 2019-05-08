@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// User info
+// Beer info
+// Brewery info >> from beer
+// Venue info
+
+
 class Post extends React.Component {
     constructor(props){
         super(props)

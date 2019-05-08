@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Post from './post';
+import Post from './post_container';
 
 class Posts extends React.Component {
     constructor(props){

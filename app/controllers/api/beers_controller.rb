@@ -18,12 +18,13 @@ class Api::BeersController < ApplicationController
     end
 
     def destroy
-
+      @beer = Beer.find(beerId)
+      @beer.destroy!
     end
 
     private
       def beer_params
-        params.require(:beer).permit(:name, :beer_type, :rating, :brewery_id)
+        params.require(:beer).permit(:name, :beer_type, :brewery_id)
       end
 
 end

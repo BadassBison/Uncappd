@@ -8,8 +8,13 @@ const postsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type){
 
-        // case RECEIVE_POST:
-        //   return merge({}, state, { [action.currentUser.id]: action.currentUser });
+        
+
+        case RECEIVE_POST:
+          return merge({}, state, { [action.post.id]: action.post });
+        
+        // case DELETE_POST:
+        //   return {};
 
         default:
           return state;

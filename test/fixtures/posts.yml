@@ -4,6 +4,7 @@
 #
 #  id         :bigint(8)        not null, primary key
 #  content    :string           not null
+#  rating     :integer          not null
 #  user_id    :integer          not null
 #  beer_id    :integer          not null
 #  venue_id   :integer
