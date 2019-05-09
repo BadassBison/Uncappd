@@ -342,6 +342,11 @@ header {
     width: 136px;
     box-sizing: border-box;
     background: blue;
+    overflow: hidden;
+}
+
+.user-photos span img {
+    height: 100%;
 }
 
 .page-left {

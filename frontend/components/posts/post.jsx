@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 class Post extends React.Component {
     constructor(props){
         super(props)
+        this.num = Math.ceil(Math.random() * 13);
+        this.beer = `beer${this.num}`;
     }
 
     render() {
@@ -33,7 +35,7 @@ class Post extends React.Component {
                         <p>{this.props.post.content}</p>
                         <p>Rating: {this.props.post.rating}</p>
                     </div>
-                    <div className="post-image"></div>
+                    <div className="post-image"><img src={window[this.beer]} /></div>
                     <span className="post-time">5 May 19</span>
                     <span className="post-show"><Link to="/home">View Detailed Check-in</Link></span>
                 </div>

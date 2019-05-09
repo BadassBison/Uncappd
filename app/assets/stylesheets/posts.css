@@ -105,10 +105,14 @@ body {
 }
 
 .post-image {
-    height: 200px;
+    height: 250px;
     width: 500px;
-    background: lightgreen;
     margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
 }
 
 .post-time {
