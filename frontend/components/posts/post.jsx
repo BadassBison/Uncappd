@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class Post extends React.Component {
     constructor(props){
         super(props)
-        this.num = Math.ceil(Math.random() * 13);
+        this.num = Math.ceil(Math.random() * 2);
         this.beer = `beer${this.num}`;
     }
 

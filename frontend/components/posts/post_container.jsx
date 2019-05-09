@@ -4,8 +4,6 @@ import Post from './post';
 
 const mapSTP = (state, ownProps) => {
     
-    // debugger
-    
     return( 
         {
             currentUser: state.entities.users[state.session.id],

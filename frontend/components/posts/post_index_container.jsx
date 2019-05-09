@@ -9,7 +9,7 @@ import {
 import Posts from './post_index';
 
 const mapSTP = (state, ownProps) => {
-    // debugger
+    
     return ({
         currentUser: state.entities.users[state.session.id],
         posts: Object.values(state.entities.posts),
