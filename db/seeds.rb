@@ -117,7 +117,7 @@ ActiveRecord::Base.transaction do
         Beer.create!(
             name: Faker::Beer.name,
             beer_type: Faker::Beer.style,
-            brewery_id: (1..7).to_a.sample
+            brewery_id: Brewery.limit(7).sample.id
         )
     }
 
@@ -126,8 +126,8 @@ ActiveRecord::Base.transaction do
             content: Faker::Movies::Hobbit.quote,
             rating: 3,
             user_id: 1,
-            beer_id: (1..80).to_a.sample,
-            venue_id: (1..7).to_a.sample
+            beer_id: Beer.limit(80).sample.id,
+            venue_id: Venue.limit(7).sample.id
         )
     }
 
