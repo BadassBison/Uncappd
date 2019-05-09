@@ -52,10 +52,10 @@ class NavBar extends React.Component {
                 <div className="nav-left">
                     <Link to={"/"}><img src={window.navLogo} /></Link>
                     <div className="nav-links">
-                        <a href="#">The Pub</a>
-                        <a href="#">Top Rated</a>
-                        <a href="#">Supporter</a>
-                        <a href="#">Help</a>
+                        <Link to="/">The Pub</Link>
+                        <Link to="/">Top Rated</Link>
+                        {/* <a href="#">Supporter</a>
+                        <a href="#">Help</a> */}
                     </div>
                 </div>
 

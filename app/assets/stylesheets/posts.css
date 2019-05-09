@@ -67,6 +67,12 @@ body {
     color: #cc6600;
 }
 
+.post-info a:hover {
+    color: #ffa143;
+}
+
+
+
 .beer-logo {
     height: 42px;
     width: 42px;

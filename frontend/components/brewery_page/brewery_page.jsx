@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Posts from '../posts/post_index_container';
 import PhotoBar from '../photo_bar/photo_bar_container';
 
-class BeerPage extends React.Component {
+class BreweryPage extends React.Component {
     constructor(props){
         super(props)
     }
@@ -17,12 +17,12 @@ class BeerPage extends React.Component {
                             <div className="b-info">
                                 <div className="b-head">
                                     <div className="b-profile-img">
-                                        <img src={window.beerProfileImg} alt="beerProfile"/>
+                                        <img src={window.breweryProfileImg} alt="breweryProfile"/>
                                     </div>
                                     <div className="b-demo-info">
-                                        <h1>Amstel Lager</h1>
-                                        <Link to="/">Brewery Name</Link>
-                                        <p>Beer Type</p>
+                                        <h1>Stone Brewing</h1>
+                                        <Link to="/">Escondido, CA United States</Link>
+                                        <p>Regional Brewery</p>
                                     </div>
                                     <div className="b-counter">
                                         <div className="b-box-ul b-box">
@@ -41,25 +41,21 @@ class BeerPage extends React.Component {
                                 </div>
 
                                 <div className="b-mid-info">
-                                    <div className="mid-data"><p>4.2% ABV</p></div>
-                                    <div className="mid-data"><p>6 IBU</p></div>
-                                    <div className="mid-data"><p>Rating: 4.3</p></div>
-                                    <div className="mid-data"><p>Ratings: 12,456</p></div>
-                                    <div className="mid-data-end"><p>Added 05/12/12</p></div>
+                                    <div className="mid-data"><p>Rating: 4.1</p></div>
+                                    <div className="mid-data"><p>Ratings: 612,456</p></div>
+                                    <div className="mid-data"><Link to="/beer">1324 Beers</Link></div>
+                                    <div className="mid-data"><p>Added 05/12/12</p></div>
+                                    <div className="mid-data-end"><div className="star"><i class="fas fa-star"></i></div></div>
                                 </div>
 
 
                                 <div className="b-description">
-                                    <p>Bud Light is brewed using a blend of premium aroma hop varieties, both American-grow <Link to="/">Show More</Link></p>
+                                    <p>Founded by Greg Koch and Steve Wagner in 1996, San Diego-based Stone Brewing is the <Link to="/">Show More</Link></p>
                                     <div className="b-buttons">
                                         <div className="b-btn"><i class="fas fa-check"></i></div> 
                                         <div className="b-btn"><i class="fas fa-plus"></i></div>
                                     </div>
                                 </div>
-
-
-
-
 
                             </div>
                             
@@ -73,6 +69,10 @@ class BeerPage extends React.Component {
                         </div>
                         
                         <div className="page-right">
+                            <div className="b-edits">
+                                <a href="https://github.com/BadassBison/Uncappd/issues">Propose Edit</a>
+                                <a href="https://github.com/BadassBison/Uncappd/issues">Propose Duplicate</a>
+                            </div>
                             <div className="box"></div>
                             <div className="box"></div>
                             <div className="box"></div>
@@ -86,4 +86,4 @@ class BeerPage extends React.Component {
     }
 };
   
-export default BeerPage;
+export default BreweryPage;

@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// User info
-// Beer info
-// Brewery info >> from beer
-// Venue info
-
 
 class Post extends React.Component {
     constructor(props){
@@ -22,12 +17,12 @@ class Post extends React.Component {
                 <div className="post-top">
                     <div className="profile-img"><img src={window.demoProfile} /></div>
                     <div className="post-info">
-                        <Link to="/home"> {user.fName} {user.lName} </Link> 
+                        <Link to="/user"> {user.fName} {user.lName} </Link> 
                         is drinking 
-                        <Link to="/home"> {this.props.beer.name} </Link> 
+                        <Link to="/beer"> {this.props.beer.name} </Link> 
                         at 
                         <Link to="/home"> {this.props.venue.name} </Link> 
-                        {from} <Link to="/home"> {brewery} </Link>
+                        {from} <Link to="/brewery"> {brewery} </Link>
                     </div>
                     <div className="beer-logo"><img src={window.beerLogo} /></div>
                 </div>

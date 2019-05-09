@@ -20,6 +20,25 @@ header {
     background-size: cover;
 }
 
+.user-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 92px;
+    width: 40%;
+    color: white;
+    margin: 0 0 16px 45px;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loction p {
+    padding-right: 6px;
+}
+
 .main-img {
     height: 80px;
     width: 80px;
@@ -41,6 +60,265 @@ header {
     justify-content: space-between;
     width: 1024px;
     margin-top: 80px;
+}
+
+.b-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    margin-bottom: 15px;
+    padding: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px lightgray;
+}
+
+.b-head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.b-mid-info {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.mid-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: gray;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid lightgray;
+}
+
+.mid-data-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: gray;
+    width: 20%;
+    height: 100%;
+}
+
+.b-description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 52px;
+    box-sizing: border-box;
+}
+
+.b-description p {
+    width: 70%;
+    color: gray;
+    font-size: 18px;
+}
+
+.b-description a {
+    text-decoration: none;
+    color: #cc6600;
+}
+
+.b-description a:hover {
+    color: #ffa143;
+}
+
+.mid-data a {
+    text-decoration: none;
+    color: #cc6600;
+}
+
+.mid-data a:hover {
+    color: #ffa143;
+}
+
+.b-edits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.b-edits a {
+    text-decoration: none;
+    color: #cc6600;
+}
+
+.b-edits a:hover {
+    color: #ffa143;
+} 
+
+.star {
+
+    height: 30px;
+    width: 30px;
+    background: steelblue;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star .fa-star {
+    position: relative;
+    left: 0;
+    top: 0;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: white;
+}
+
+.b-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    width: 52px;
+    background: #FFC919;
+}
+
+.b-buttons .fa-check, .b-buttons .fa-plus {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5em;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.b-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 115px;
+}
+
+.b-btn:hover {
+    background: rgb(193, 154, 27);
+}
+
+.b-profile-img {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.b-profile-img img {
+    width: 100%;
+}
+
+.b-demo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 350px;
+}
+
+.b-demo-info h1 {
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.b-demo-info a {
+    font-size: 20px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #cc6600;
+    margin-bottom: 6px;
+}
+
+.b-demo-info a:hover {
+    color: #ffa143;
+}
+
+.b-demo-info p {
+    color: gray;
+}
+
+.b-counter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 95px;
+    box-sizing: border-box;
+}
+
+.b-box {
+    box-sizing: border-box;
+    width: 50%;
+    height: 50%;
+    padding: 6px;
+    color: gray;
+    font-weight: 300;
+}
+
+.b-box-ul {
+    border-right: 1px solid rgb(228, 228, 228);
+}
+
+.b-box-ur {
+    
+}
+
+.b-box-dl {
+    border-right: 1px solid rgb(228, 228, 228);
+    border-top: 1px solid rgb(228, 228, 228);
+}
+
+.b-box-dr {
+    border-top: 1px solid rgb(228, 228, 228);
+    
+}
+
+.stat {
+    display: block;
+    font-size: 11.2px;
+    width: 100%;
+}
+
+.b-data {
+    font-size: 22.4px;
+    width: 100%;
+}
+
+.user-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.user-links a:hover {
+    box-shadow: 1px 1px 16px 6px rgba(139,139, 139, 0.2);
+    background: rgba(139,139, 139, 0.2)
 }
 
 .user-contents {

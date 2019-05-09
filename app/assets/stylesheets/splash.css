@@ -1,7 +1,10 @@
 * {
-    font-family: ProximaNova, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: ProximaNova, Helvetica, sans-serif;
 }
 
 .masthead {
@@ -75,8 +78,8 @@
     box-sizing: border-box;
     z-index: 5;
 }
+
 #link-wrapper a {
-    font-family: ProximaNova, Helvetica, sans-serif;
     font-size: 0.9em;
     border: 2px solid white;
     font-weight: 500;
