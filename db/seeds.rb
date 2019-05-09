@@ -6,119 +6,129 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(
-    username: "Carlos",
-    email: "carlos@gmax.net",
-    password: 123456,
-    f_name: "Carlos",
-    l_name: "Garcia"
-)
 
-(1..10).each {
-    User.create!(   
-        username: Faker::JapaneseMedia::DragonBall.character,
-        email: Faker::Internet.email,
+ActiveRecord::Base.transaction do
+    User.destroy_all
+    Post.destroy_all
+    Beer.destroy_all
+    Brewery.destroy_all
+    Venue.destroy_all
+
+    User.create!(
+        username: "Carlos",
+        email: "carlos@gmax.net",
         password: 123456,
-        f_name: Faker::Name.first_name,
-        l_name: Faker::Name.last_name
+        f_name: "Carlos",
+        l_name: "Garcia"
     )
-}
 
-(1..10).each {
-    User.create!(   
-        username: Faker::Artist.name,
-        email: Faker::Internet.email,
-        password: 123456,
-        f_name: Faker::Name.first_name,
-        l_name: Faker::Name.last_name
+    (1..10).each {
+        User.create(   
+            username: Faker::JapaneseMedia::DragonBall.character,
+            email: Faker::Internet.email,
+            password: 123456,
+            f_name: Faker::Name.first_name,
+            l_name: Faker::Name.last_name
+        )
+    }
+
+    (1..10).each {
+        User.create(   
+            username: Faker::Artist.name,
+            email: Faker::Internet.email,
+            password: 123456,
+            f_name: Faker::Name.first_name,
+            l_name: Faker::Name.last_name
+        )
+    }
+
+    Venue.create!(
+        name: "Bourbon & Branch",
+        location: "501 Jones St, San Francisco",
+        category: "Cocktail Bar" 
     )
-}
-
-Venue.create!(
-    name: "Bourbon & Branch",
-    location: "501 Jones St, San Francisco",
-    category: "Cocktail Bar" 
-)
-Venue.create!(
-    name: "Tunnel Top Lounge and Bar",
-    location: "601 Bush St, San Francisco",
-    category: "Bar" 
-)
-Venue.create!(
-    name: "Chelsea Place",
-    location: "641 Bush St, San Francisco",
-    category: "Bar"
-)
-Venue.create!(
-    name: "Bar Fluxus",
-    location: "18 Harlan Pl, San Francisco",
-    category: "Bar" 
-)
-Venue.create!(
-    name: "E&O Kitchen and Bar",
-    location: "314 Sutter St, San Francisco",
-    category: "Asian Bar" 
-)
-Venue.create!(
-    name: "Pacific Cocktail Haven",
-    location: "580 Sutter St, San Francisco",
-    category: "Cocktail bar" 
-)
-Venue.create!(
-    name: "Tonga Room & Hurricane Bar",
-    location: "950 Mason St, San Francisco",
-    category: "Bar" 
-)
-Brewery.create!(
-    name: "Bourbon & Branch",
-    location: "501 Jones St, San Francisco",
-    category: "Cocktail Bar" 
-)
-Brewery.create!(
-    name: "Tunnel Top Lounge and Bar",
-    location: "601 Bush St, San Francisco",
-    category: "Bar" 
-)
-Brewery.create!(
-    name: "Chelsea Place",
-    location: "641 Bush St, San Francisco",
-    category: "Bar" 
-)
-Brewery.create!(
-    name: "Bar Fluxus",
-    location: "18 Harlan Pl, San Francisco",
-    category: "Bar" 
-)
-Brewery.create!(
-    name: "E&O Kitchen and Bar",
-    location: "314 Sutter St, San Francisco",
-    category: "Asian Bar" 
-)
-Brewery.create!(
-    name: "Pacific Cocktail Haven",
-    location: "580 Sutter St, San Francisco",
-    category: "Cocktail bar" 
-)
-Brewery.create!(
-    name: "Tonga Room & Hurricane Bar",
-    location: "950 Mason St, San Francisco",
-    category: "Bar" 
-)
-
-(1..100).each {
-    Beer.create!(
-        name: Faker::Beer.name,
-        beer_type: Faker::Beer.style,
-        brewery_id: (1..7).to_a.sample
+    Venue.create!(
+        name: "Tunnel Top Lounge and Bar",
+        location: "601 Bush St, San Francisco",
+        category: "Bar" 
     )
-}
-
-(1..20).each {
-    Post.create!(
-        content: Faker::Movies::Hobbit.quote,
-        rating: 3,
-        user_id: 1,
-        beer_id: (1..80).to_a.sample,
-        venue_id: (1..7).to_a.sample
+    Venue.create!(
+        name: "Chelsea Place",
+        location: "641 Bush St, San Francisco",
+        category: "Bar"
     )
-}
+    Venue.create!(
+        name: "Bar Fluxus",
+        location: "18 Harlan Pl, San Francisco",
+        category: "Bar" 
+    )
+    Venue.create!(
+        name: "E&O Kitchen and Bar",
+        location: "314 Sutter St, San Francisco",
+        category: "Asian Bar" 
+    )
+    Venue.create!(
+        name: "Pacific Cocktail Haven",
+        location: "580 Sutter St, San Francisco",
+        category: "Cocktail bar" 
+    )
+    Venue.create!(
+        name: "Tonga Room & Hurricane Bar",
+        location: "950 Mason St, San Francisco",
+        category: "Bar" 
+    )
+    Brewery.create!(
+        name: "Bourbon & Branch",
+        location: "501 Jones St, San Francisco",
+        category: "Cocktail Bar" 
+    )
+    Brewery.create!(
+        name: "Tunnel Top Lounge and Bar",
+        location: "601 Bush St, San Francisco",
+        category: "Bar" 
+    )
+    Brewery.create!(
+        name: "Chelsea Place",
+        location: "641 Bush St, San Francisco",
+        category: "Bar" 
+    )
+    Brewery.create!(
+        name: "Bar Fluxus",
+        location: "18 Harlan Pl, San Francisco",
+        category: "Bar" 
+    )
+    Brewery.create!(
+        name: "E&O Kitchen and Bar",
+        location: "314 Sutter St, San Francisco",
+        category: "Asian Bar" 
+    )
+    Brewery.create!(
+        name: "Pacific Cocktail Haven",
+        location: "580 Sutter St, San Francisco",
+        category: "Cocktail bar" 
+    )
+    Brewery.create!(
+        name: "Tonga Room & Hurricane Bar",
+        location: "950 Mason St, San Francisco",
+        category: "Bar" 
+    )
+
+    (1..100).each {
+        Beer.create!(
+            name: Faker::Beer.name,
+            beer_type: Faker::Beer.style,
+            brewery_id: (1..7).to_a.sample
+        )
+    }
+
+    (1..20).each {
+        Post.create!(
+            content: Faker::Movies::Hobbit.quote,
+            rating: 3,
+            user_id: 1,
+            beer_id: (1..80).to_a.sample,
+            venue_id: (1..7).to_a.sample
+        )
+    }
+
+end
