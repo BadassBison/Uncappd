@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Posts from '../posts/post_index_container';
+import PhotoBar from '../photo_bar/photo_bar_container';
 
 class UserPage extends React.Component {
     constructor(props){
@@ -11,12 +12,21 @@ class UserPage extends React.Component {
         return (
             <>
                 <div className="contents-wrapper">
-                    <header></header>
+                    <header>
+                        <div className="main-img"><img src={window.demoProfile} /></div>
+                    </header>
                 </div>
+
                 <div className="page-wrapper">
-                    <div className="page-contents">
+
+                    <div className="user-contents">
                         
                         <div className="page-left">
+
+                            <div className="user-photos">
+                                <PhotoBar />
+                            </div>
+
                             <div className="posts">
                                 <Posts />
                             </div>

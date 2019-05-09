@@ -1,6 +1,7 @@
 .page-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
@@ -11,10 +12,28 @@
 }
 
 header {
+    display: flex;
+    align-items: flex-end;
     height: 300px;
     width: 1024px;
     background-image: url(https://untappd.akamaized.net/site/assets/v3/images/cover_default.jpg);
     background-size: cover;
+}
+
+.main-img {
+    height: 80px;
+    width: 80px;
+    border: 2px solid lightgrey;
+    border-radius: 50%;
+    margin: 0 0 20px 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.main-img img {
+    max-width: 100%;
 }
 
 .page-contents {
@@ -22,6 +41,29 @@ header {
     justify-content: space-between;
     width: 1024px;
     margin-top: 80px;
+}
+
+.user-contents {
+    display: flex;
+    justify-content: space-between;
+    width: 1024px;
+    margin-top: 15px;
+}
+
+.user-photos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.user-photos span {
+    display: inline-block;
+    height: 136px;
+    width: 136px;
+    box-sizing: border-box;
+    background: blue;
 }
 
 .page-left {
