@@ -1,9 +1,17 @@
 ![Uncappd Logo](https://uncappd.herokuapp.com/assets/uncappd-cfa9569abed690055e33adab5a7e13102c776907ab1e1bd011dc12fb1dab16a8.png "Uncappd Logo")
 
-# [Live Site](https://uncappd.herokuapp.com/#/)
+### [Live Demo](https://uncappd.herokuapp.com/#/)
 ### An Untapped Clone - [https://untappd.com/](https://untappd.com/)
 
 Uncappd is a social media application that allows users to publicly share beers and their reviews, of which can be viewed by other users/friends.
+
+This project was designed and built within a 10 day time period. This is my first full stack project using the technologies listed below and was an amazing learning experience.
+
+## Features
+
+* Secure frontend to backend user authentication using BCrypt.
+* Users can create profiles and review beers they've tried.
+* Users can find different beers, breweries, or venues to try.
 
 ## Getting Started
 
