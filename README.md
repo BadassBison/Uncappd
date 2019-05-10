@@ -1,7 +1,7 @@
 ![Uncappd Logo](https://uncappd.herokuapp.com/assets/uncappd-cfa9569abed690055e33adab5a7e13102c776907ab1e1bd011dc12fb1dab16a8.png "Uncappd Logo")
 
 # [Live Site](https://uncappd.herokuapp.com/#/)
-### An Untapped Clone [https://untappd.com/](https://untappd.com/)
+### An Untapped Clone - [https://untappd.com/](https://untappd.com/)
 
 Uncappd is a social media application that allows users to publicly share beers and their reviews, of which can be viewed by other users/friends.
 
@@ -46,4 +46,7 @@ I would have to say I am most proud of the styling on this site. I dedicated a g
 
 ### Work in Progress
 
-There are still many features that needed to be fully integrated and brought into the site.
+There are still many features that need to be fully integrated and brought into the site.
+As of right now the forms to add posts, beers, brewerys, and venues, are all hidden.
+This forms need to be integrated into the site through the posting feature
+The ability to add photos also needs to be implemented.
