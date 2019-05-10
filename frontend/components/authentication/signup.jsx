@@ -55,9 +55,7 @@ class SignUp extends React.Component {
         this.props.clearErrors();
 
         let a = this.makeid(8);
-        // let a = 'bison';
         let b = this.makeid(8);
-        // let b = 'bison';
 
         const username = {
             strings: [a],
@@ -164,12 +162,12 @@ class SignUp extends React.Component {
                         
                         <div className="row">
                             <div className="form-field">
-                                <input type="text" id="pass1" className="input logo" name="user[password]" placeholder="password" onChange={this.onChange("password")} />
+                                <input type="password" id="pass1" className="input logo" name="user[password]" placeholder="Password" onChange={this.onChange("password")} />
                                 <i className="fas fa-lock"></i>
                             </div>
                             
                             <div className="form-field">
-                                <input type="text" id="pass2" className="input logo" name="user[repeat_password]" placeholder="Repeat Password" onChange={this.onChange("repeatPass")} />
+                                <input type="password" id="pass2" className="input logo" name="user[repeat_password]" placeholder="Repeat Password" onChange={this.onChange("repeatPass")} />
                                 <i className="fas fa-lock"></i>
                             </div>
                         </div>
@@ -202,7 +200,7 @@ class SignUp extends React.Component {
                             </div>
                             
                             <div className="form-field">
-                                <input type="text" id="bday" className="input" name="user[birthday]" placeholder="birthday" onChange={this.onChange("birthday")} />
+                                <input type="text" id="bday" className="input" name="user[birthday]" placeholder="Birthday" onChange={this.onChange("birthday")} />
                             </div>
                         </div>
                         

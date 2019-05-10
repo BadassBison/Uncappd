@@ -99,7 +99,7 @@ class LogIn extends React.Component {
                         <div className="signin-field">
                             <div className="icon-wrapper">
                                 <i className="fas fa-lock" id="fa2"></i>
-                                <input type="password" id="password" className="input" name="user[password]" placeholder="password" onChange={this.onChange("password")} required />
+                                <input type="password" id="password" className="input" name="user[password]" placeholder="Password" onChange={this.onChange("password")} required />
                             </div>
                             <span className="signin-errors">{this.props.errors}</span>
                         </div>
