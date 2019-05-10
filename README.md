@@ -1,5 +1,7 @@
-# [Uncappd](https://uncappd.herokuapp.com/#/)
-### An Untapped Clone (https://untappd.com/)
+![Uncappd Logo](https://uncappd.herokuapp.com/assets/uncappd-cfa9569abed690055e33adab5a7e13102c776907ab1e1bd011dc12fb1dab16a8.png "Uncappd Logo")
+
+# [Live Site](https://uncappd.herokuapp.com/#/)
+### An Untapped Clone [https://untappd.com/](https://untappd.com/)
 
 Uncappd is a social media application that allows users to publicly share beers and their reviews, of which can be viewed by other users/friends.
 
