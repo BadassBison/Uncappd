@@ -9,11 +9,11 @@ class PhotoBar extends React.Component {
     render() {
         return (
             <>
-                <span><img src={window[`beer${Math.ceil(Math.random() * 2)}`]} /></span>
-                <span><img src={window[`beer${Math.ceil(Math.random() * 2)}`]} /></span>
-                <span><img src={window[`beer${Math.ceil(Math.random() * 2)}`]} /></span>
-                <span><img src={window[`beer${Math.ceil(Math.random() * 2)}`]} /></span>
-                <span><img src={window[`beer${Math.ceil(Math.random() * 2)}`]} /></span>
+                <span><img src={window[`beer${Math.ceil(Math.random() * 13)}`]} /></span>
+                <span><img src={window[`beer${Math.ceil(Math.random() * 13)}`]} /></span>
+                <span><img src={window[`beer${Math.ceil(Math.random() * 13)}`]} /></span>
+                <span><img src={window[`beer${Math.ceil(Math.random() * 13)}`]} /></span>
+                <span><img src={window[`beer${Math.ceil(Math.random() * 13)}`]} /></span>
             </>
         )
     }
