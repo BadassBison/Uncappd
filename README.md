@@ -13,6 +13,27 @@ This project was designed and built within a 10 day time period. This is my firs
 * Users can create profiles and review beers they've tried.
 * Users can find different beers, breweries, or venues to try.
 
+## Key Features and Page Break Down
+
+### Signin/Signup
+
+
+
+The core feature of this app is to add reviews on different beers that you have tried.
+Each review includes information on the user, the beer, the brewery that made the beer, then venue the beer was drank at, a comment from the user, a rating on the beer, and a photo of the beer.
+
+This app pushed my limits of social app knowledge and showed me how complicated sites can get when almost all of the information is shared across everything else. 
+
+I would have to say I am most proud of the styling on this site. I dedicated a good portion of my time to replicate the original site as closley as possible. Some items are slightly off due to other features still being developed, but for the most part, you would have a hard time determining my site from the real thing. That also involves a logo that is almost indistinguishable from the real thing.
+
+### Work in Progress
+
+There are still many features that need to be fully integrated and brought into the site.
+As of right now the forms to add posts, beers, brewerys, and venues, are all hidden.
+This forms need to be integrated into the site through the posting feature
+The ability to add photos also needs to be implemented.
+
+
 ## Getting Started
 
 The process of completing this clone looks like this:
@@ -42,19 +63,3 @@ This project will be built with;
 * PosgreSQL database
 * Hosted on Heroku
 * VS Code editor
-
-### Key Features and Page Break Down
-
-The core feature of this app is to add reviews on different beers that you have tried.
-Each review includes information on the user, the beer, the brewery that made the beer, then venue the beer was drank at, a comment from the user, a rating on the beer, and a photo of the beer.
-
-This app pushed my limits of social app knowledge and showed me how complicated sites can get when almost all of the information is shared across everything else. 
-
-I would have to say I am most proud of the styling on this site. I dedicated a good portion of my time to replicate the original site as closley as possible. Some items are slightly off due to other features still being developed, but for the most part, you would have a hard time determining my site from the real thing. That also involves a logo that is almost indistinguishable from the real thing.
-
-### Work in Progress
-
-There are still many features that need to be fully integrated and brought into the site.
-As of right now the forms to add posts, beers, brewerys, and venues, are all hidden.
-This forms need to be integrated into the site through the posting feature
-The ability to add photos also needs to be implemented.
